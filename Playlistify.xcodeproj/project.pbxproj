@@ -17,7 +17,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		71170466273AFD1B0070BCE9 /* bingbong.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = bingbong.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		71170466273AFD1B0070BCE9 /* Playlistify.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Playlistify.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		71170469273AFD1B0070BCE9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7117046B273AFD1B0070BCE9 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		7117046D273AFD1B0070BCE9 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -42,7 +42,7 @@
 		7117045D273AFD1B0070BCE9 = {
 			isa = PBXGroup;
 			children = (
-				71170468273AFD1B0070BCE9 /* bingbong */,
+				71170468273AFD1B0070BCE9 /* Playlistify */,
 				71170467273AFD1B0070BCE9 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -50,12 +50,12 @@
 		71170467273AFD1B0070BCE9 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				71170466273AFD1B0070BCE9 /* bingbong.app */,
+				71170466273AFD1B0070BCE9 /* Playlistify.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		71170468273AFD1B0070BCE9 /* bingbong */ = {
+		71170468273AFD1B0070BCE9 /* Playlistify */ = {
 			isa = PBXGroup;
 			children = (
 				71170469273AFD1B0070BCE9 /* AppDelegate.swift */,
@@ -67,15 +67,15 @@
 				71170474273AFD1F0070BCE9 /* LaunchScreen.storyboard */,
 				71170477273AFD1F0070BCE9 /* Info.plist */,
 			);
-			path = bingbong;
+			path = Playlistify;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		71170465273AFD1B0070BCE9 /* bingbong */ = {
+		71170465273AFD1B0070BCE9 /* Playlistify */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 7117047A273AFD1F0070BCE9 /* Build configuration list for PBXNativeTarget "bingbong" */;
+			buildConfigurationList = 7117047A273AFD1F0070BCE9 /* Build configuration list for PBXNativeTarget "Playlistify" */;
 			buildPhases = (
 				71170462273AFD1B0070BCE9 /* Sources */,
 				71170463273AFD1B0070BCE9 /* Frameworks */,
@@ -85,9 +85,9 @@
 			);
 			dependencies = (
 			);
-			name = bingbong;
+			name = Playlistify;
 			productName = bingbong;
-			productReference = 71170466273AFD1B0070BCE9 /* bingbong.app */;
+			productReference = 71170466273AFD1B0070BCE9 /* Playlistify.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -105,7 +105,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 71170461273AFD1B0070BCE9 /* Build configuration list for PBXProject "bingbong" */;
+			buildConfigurationList = 71170461273AFD1B0070BCE9 /* Build configuration list for PBXProject "Playlistify" */;
 			compatibilityVersion = "Xcode 13.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -118,7 +118,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				71170465273AFD1B0070BCE9 /* bingbong */,
+				71170465273AFD1B0070BCE9 /* Playlistify */,
 			);
 		};
 /* End PBXProject section */
@@ -295,7 +295,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = C7X9RKK64W;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = bingbong/Info.plist;
+				INFOPLIST_FILE = Playlistify/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -306,7 +306,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.asiegel2.bingbong;
+				PRODUCT_BUNDLE_IDENTIFIER = com.HibbelerIndustries.Playlistify;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -323,7 +323,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = C7X9RKK64W;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = bingbong/Info.plist;
+				INFOPLIST_FILE = Playlistify/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -334,7 +334,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.asiegel2.bingbong;
+				PRODUCT_BUNDLE_IDENTIFIER = com.HibbelerIndustries.Playlistify;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -345,7 +345,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		71170461273AFD1B0070BCE9 /* Build configuration list for PBXProject "bingbong" */ = {
+		71170461273AFD1B0070BCE9 /* Build configuration list for PBXProject "Playlistify" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				71170478273AFD1F0070BCE9 /* Debug */,
@@ -354,7 +354,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		7117047A273AFD1F0070BCE9 /* Build configuration list for PBXNativeTarget "bingbong" */ = {
+		7117047A273AFD1F0070BCE9 /* Build configuration list for PBXNativeTarget "Playlistify" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				7117047B273AFD1F0070BCE9 /* Debug */,
