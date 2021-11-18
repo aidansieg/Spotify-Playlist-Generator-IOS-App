@@ -15,7 +15,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "71170465273AFD1B0070BCE9"
-               BuildableName = "bingbong.app"
+               BuildableName = "Playlistify.app"
                BlueprintName = "Playlistify"
                ReferencedContainer = "container:Playlistify.xcodeproj">
             </BuildableReference>
@@ -45,7 +45,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "71170465273AFD1B0070BCE9"
-            BuildableName = "bingbong.app"
+            BuildableName = "Playlistify.app"
             BlueprintName = "Playlistify"
             ReferencedContainer = "container:Playlistify.xcodeproj">
          </BuildableReference>
@@ -62,7 +62,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "71170465273AFD1B0070BCE9"
-            BuildableName = "bingbong.app"
+            BuildableName = "Playlistify.app"
             BlueprintName = "Playlistify"
             ReferencedContainer = "container:Playlistify.xcodeproj">
          </BuildableReference>

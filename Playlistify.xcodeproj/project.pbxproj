@@ -14,6 +14,7 @@
 		71170473273AFD1F0070BCE9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 71170472273AFD1F0070BCE9 /* Assets.xcassets */; };
 		71170476273AFD1F0070BCE9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 71170474273AFD1F0070BCE9 /* LaunchScreen.storyboard */; };
 		7117047E273AFFB90070BCE9 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7117047D273AFFB90070BCE9 /* MenuViewController.swift */; };
+		D5DBB4A52746B15F005B4C53 /* Algorithm.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5DBB4A42746B15F005B4C53 /* Algorithm.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		71170475273AFD1F0070BCE9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		71170477273AFD1F0070BCE9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7117047D273AFFB90070BCE9 /* MenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
+		D5DBB4A42746B15F005B4C53 /* Algorithm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Algorithm.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +68,7 @@
 				71170472273AFD1F0070BCE9 /* Assets.xcassets */,
 				71170474273AFD1F0070BCE9 /* LaunchScreen.storyboard */,
 				71170477273AFD1F0070BCE9 /* Info.plist */,
+				D5DBB4A42746B15F005B4C53 /* Algorithm.swift */,
 			);
 			path = Playlistify;
 			sourceTree = "<group>";
@@ -145,6 +148,7 @@
 				7117046E273AFD1B0070BCE9 /* ViewController.swift in Sources */,
 				7117046A273AFD1B0070BCE9 /* AppDelegate.swift in Sources */,
 				7117046C273AFD1B0070BCE9 /* SceneDelegate.swift in Sources */,
+				D5DBB4A52746B15F005B4C53 /* Algorithm.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
