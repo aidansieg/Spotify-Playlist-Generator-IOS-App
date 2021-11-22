@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 55;
+	objectVersion = 54;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -14,8 +14,24 @@
 		71170473273AFD1F0070BCE9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 71170472273AFD1F0070BCE9 /* Assets.xcassets */; };
 		71170476273AFD1F0070BCE9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 71170474273AFD1F0070BCE9 /* LaunchScreen.storyboard */; };
 		7117047E273AFFB90070BCE9 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7117047D273AFFB90070BCE9 /* MenuViewController.swift */; };
+		D1CD4B4D274BFE2500EC5E7D /* SpotifyiOS.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = D1CD4B4B274BFE2500EC5E7D /* SpotifyiOS.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		D1CD4B52274BFFFC00EC5E7D /* SpotifyiOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D1CD4B51274BFFFB00EC5E7D /* SpotifyiOS.framework */; };
 		D5DBB4A52746B15F005B4C53 /* Algorithm.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5DBB4A42746B15F005B4C53 /* Algorithm.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		D1CD4B4E274BFE2500EC5E7D /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				D1CD4B4D274BFE2500EC5E7D /* SpotifyiOS.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		71170466273AFD1B0070BCE9 /* Playlistify.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Playlistify.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -27,6 +43,11 @@
 		71170475273AFD1F0070BCE9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		71170477273AFD1F0070BCE9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7117047D273AFFB90070BCE9 /* MenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
+		D1CD4B4A274BFE0F00EC5E7D /* ios-sdk-1.2.2 */ = {isa = PBXFileReference; lastKnownFileType = folder; name = "ios-sdk-1.2.2"; path = "../../../Downloads/ios-sdk-1.2.2"; sourceTree = "<group>"; };
+		D1CD4B4B274BFE2500EC5E7D /* SpotifyiOS.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SpotifyiOS.framework; path = "../../../Downloads/ios-sdk-1.2.2/SpotifyiOS.framework"; sourceTree = "<group>"; };
+		D1CD4B4F274BFFE400EC5E7D /* App Development */ = {isa = PBXFileReference; lastKnownFileType = folder; name = "App Development"; path = ..; sourceTree = "<group>"; };
+		D1CD4B51274BFFFB00EC5E7D /* SpotifyiOS.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SpotifyiOS.framework; path = Playlistify/SpotifyiOS.framework; sourceTree = "<group>"; };
+		D1CD4B53274C156500EC5E7D /* Spotify-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Spotify-Bridging-Header.h"; sourceTree = "<group>"; };
 		D5DBB4A42746B15F005B4C53 /* Algorithm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Algorithm.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -35,6 +56,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D1CD4B52274BFFFC00EC5E7D /* SpotifyiOS.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -46,6 +68,7 @@
 			children = (
 				71170468273AFD1B0070BCE9 /* Playlistify */,
 				71170467273AFD1B0070BCE9 /* Products */,
+				D1CD4B49274BFE0F00EC5E7D /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -69,8 +92,20 @@
 				71170474273AFD1F0070BCE9 /* LaunchScreen.storyboard */,
 				71170477273AFD1F0070BCE9 /* Info.plist */,
 				D5DBB4A42746B15F005B4C53 /* Algorithm.swift */,
+				D1CD4B53274C156500EC5E7D /* Spotify-Bridging-Header.h */,
 			);
 			path = Playlistify;
+			sourceTree = "<group>";
+		};
+		D1CD4B49274BFE0F00EC5E7D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D1CD4B51274BFFFB00EC5E7D /* SpotifyiOS.framework */,
+				D1CD4B4F274BFFE400EC5E7D /* App Development */,
+				D1CD4B4B274BFE2500EC5E7D /* SpotifyiOS.framework */,
+				D1CD4B4A274BFE0F00EC5E7D /* ios-sdk-1.2.2 */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -83,6 +118,7 @@
 				71170462273AFD1B0070BCE9 /* Sources */,
 				71170463273AFD1B0070BCE9 /* Frameworks */,
 				71170464273AFD1B0070BCE9 /* Resources */,
+				D1CD4B4E274BFE2500EC5E7D /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -109,7 +145,7 @@
 				};
 			};
 			buildConfigurationList = 71170461273AFD1B0070BCE9 /* Build configuration list for PBXProject "Playlistify" */;
-			compatibilityVersion = "Xcode 13.0";
+			compatibilityVersion = "Xcode 12.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -298,6 +334,10 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = C7X9RKK64W;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Playlistify",
+				);
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Playlistify/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -310,9 +350,11 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
+				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_BUNDLE_IDENTIFIER = com.HibbelerIndustries.Playlistify;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "Spotify-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -326,6 +368,10 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = C7X9RKK64W;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Playlistify",
+				);
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Playlistify/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -338,9 +384,11 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
+				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_BUNDLE_IDENTIFIER = com.HibbelerIndustries.Playlistify;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "Spotify-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

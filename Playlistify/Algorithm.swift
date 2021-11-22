@@ -1,3 +1,4 @@
+/** COMMENT THIS OUT UNTIL IT IS DONE SO IT DOESN'T BREAK THE BUILD
 import UIKit
 
 // Array A of arrays B each containing 1 or more criteria elements (and nil values for any empty criteria elements) and 1 importance weight.
@@ -140,3 +141,4 @@ for constraint in constraints
         }
     }
 }
+*/

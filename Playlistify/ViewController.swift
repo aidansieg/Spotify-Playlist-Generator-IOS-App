@@ -13,8 +13,6 @@ class ViewController: UIViewController {
         super.viewDidLoad()
     }
 
-    //@IBOutlet weak var segueTextField: UITextField!
-
     @IBAction func login(_ sender: UIButton) {
         
     }
