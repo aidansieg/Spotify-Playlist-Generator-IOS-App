@@ -57,7 +57,7 @@
                     <navigationItem key="navigationItem" id="fUC-MY-vhb"/>
                     <nil key="simulatedTopBarMetrics"/>
                     <connections>
-                        <segue destination="iez-4D-05f" kind="show" identifier="login-to-main-menu" id="pe3-dc-YLT"/>
+                        <segue destination="iez-4D-05f" kind="presentation" identifier="login-to-main-menu" id="pe3-dc-YLT"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

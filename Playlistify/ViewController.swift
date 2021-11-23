@@ -85,10 +85,6 @@ class ViewController: UIViewController, SPTSessionManagerDelegate, SPTAppRemoteD
     }
 
     func appRemoteDidEstablishConnection(_ appRemote: SPTAppRemote) {
-        // THIS IS HERE AS A TEST/DEBUG TO VALIDATE THAT CONNECTED WAS ESTABLISHED.
-        print("Connection established")
-        
-        // TESTING IF SEGUE CAN BE TRIGGERED ONLY WHEN CONNECTION IS ESTABLISHED
         self.performSegue(withIdentifier: "login-to-main-menu", sender: nil)
     }
 
