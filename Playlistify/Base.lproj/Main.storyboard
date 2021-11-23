@@ -43,7 +43,6 @@
                                 </buttonConfiguration>
                                 <connections>
                                     <action selector="login:" destination="BYZ-38-t0r" eventType="touchUpInside" id="OPp-kx-FXN"/>
-                                    <segue destination="iez-4D-05f" kind="show" id="i4y-qg-IyO"/>
                                 </connections>
                             </button>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" fixedFrame="YES" image="circles.hexagongrid" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="1Eo-QF-ysZ">
@@ -57,6 +56,9 @@
                     </view>
                     <navigationItem key="navigationItem" id="fUC-MY-vhb"/>
                     <nil key="simulatedTopBarMetrics"/>
+                    <connections>
+                        <segue destination="iez-4D-05f" kind="show" identifier="login-to-main-menu" id="pe3-dc-YLT"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -365,7 +367,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="3gc-n8-UIa"/>
+        <segue reference="5yX-dm-uVv"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="circles.hexagongrid" catalog="system" width="128" height="112"/>

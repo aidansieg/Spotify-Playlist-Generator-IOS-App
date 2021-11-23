@@ -21,7 +21,7 @@ class ViewController: UIViewController, SPTSessionManagerDelegate, SPTAppRemoteD
          For more information, see https://developer.spotify.com/web-api/using-scopes/.
          */
         let scope: SPTScope = [.appRemoteControl, .playlistReadPrivate]
-
+        
         if #available(iOS 11, *) {
             // Use this on iOS 11 and above to take advantage of SFAuthenticationSession
             sessionManager.initiateSession(with: scope, options: .clientOnly)
@@ -36,11 +36,10 @@ class ViewController: UIViewController, SPTSessionManagerDelegate, SPTAppRemoteD
         
     }
     
-    
     //****************************************** Spotify configuration *******************************************//
     
     // Spotify authorization
-    private let SpotifyClientID    = "<#ClientID#>"
+    private let SpotifyClientID    = "ClientID"
     private let SpotifyRedirectURI = URL(string: "spotify-ios-quick-start://spotify-login-callback")!
 
     // Spotify configuration for when connected
@@ -86,7 +85,11 @@ class ViewController: UIViewController, SPTSessionManagerDelegate, SPTAppRemoteD
     }
 
     func appRemoteDidEstablishConnection(_ appRemote: SPTAppRemote) {
+        // THIS IS HERE AS A TEST/DEBUG TO VALIDATE THAT CONNECTED WAS ESTABLISHED.
+        print("Connection established")
         
+        // TESTING IF SEGUE CAN BE TRIGGERED ONLY WHEN CONNECTION IS ESTABLISHED
+        self.performSegue(withIdentifier: "login-to-main-menu", sender: nil)
     }
 
     func appRemote(_ appRemote: SPTAppRemote, didDisconnectWithError error: Error?) {
