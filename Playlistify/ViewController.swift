@@ -4,36 +4,15 @@
 import UIKit
 
 class ViewController: UIViewController, SPTSessionManagerDelegate, SPTAppRemoteDelegate  {
-    private let SpotifyClientID = "<#ClientID#>"
-    private let SpotifyRedirectURI = URL(string: "spotify-ios-quick-start://spotify-login-callback")!
-
-    lazy var configuration: SPTConfiguration = {
-        let configuration = SPTConfiguration(clientID: SpotifyClientID, redirectURL: SpotifyRedirectURI)
-        // Set the playURI to a non-nil value so that Spotify plays music after authenticating and App Remote can connect
-        // otherwise another app switch will be required
-        configuration.playURI = ""
-
-        // Set these url's to your backend which contains the secret to exchange for an access token
-        // You can use the provided ruby script spotify_token_swap.rb for testing purposes
-        configuration.tokenSwapURL    = URL(string: "http://localhost:1234/swap")
-        configuration.tokenRefreshURL = URL(string: "http://localhost:1234/refresh")
-        return configuration
-    }()
-
-    lazy var sessionManager: SPTSessionManager = {
-        let manager = SPTSessionManager(configuration: configuration, delegate: self)
-        return manager
-    }()
-
-    lazy var appRemote: SPTAppRemote = {
-        let appRemote = SPTAppRemote(configuration: configuration, logLevel: .debug)
-        appRemote.delegate = self
-        return appRemote
-    }()
-
-    private var lastPlayerState: SPTAppRemotePlayerState?
-
-
+    
+    //*************************************** Login Screen Display/Actions ***************************************//
+    
+    // When login view is loaded
+    override func viewDidLoad() {
+        super.viewDidLoad()
+    }
+    
+    // Login button
     @IBAction func login(_ sender: UIButton) {
         /*
          Scopes let you specify exactly what types of data your application wants to
@@ -52,15 +31,47 @@ class ViewController: UIViewController, SPTSessionManagerDelegate, SPTAppRemoteD
         }
     }
     
+    // Segue to main menu
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
     }
+    
+    
+    //****************************************** Spotify configuration *******************************************//
+    
+    // Spotify authorization
+    private let SpotifyClientID    = "<#ClientID#>"
+    private let SpotifyRedirectURI = URL(string: "spotify-ios-quick-start://spotify-login-callback")!
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
-    }
+    // Spotify configuration for when connected
+    lazy var configuration: SPTConfiguration = {
+        let configuration = SPTConfiguration(clientID: SpotifyClientID, redirectURL: SpotifyRedirectURI)
+        // Set the playURI to a non-nil value so that Spotify plays music after authenticating and App Remote can connect
+        // otherwise another app switch will be required
+        configuration.playURI = ""
 
-    // MARK: - SPTSessionManagerDelegate
+        // Set these url's to your backend which contains the secret to exchange for an access token
+        configuration.tokenSwapURL    = URL(string: "http://localhost:1234/swap")
+        configuration.tokenRefreshURL = URL(string: "http://localhost:1234/refresh")
+        return configuration
+    }()
+    
+    // Spotify session manager
+    lazy var sessionManager: SPTSessionManager = {
+        let manager = SPTSessionManager(configuration: configuration, delegate: self)
+        return manager
+    }()
+    
+    // Spotify app remote connection
+    lazy var appRemote: SPTAppRemote = {
+        let appRemote = SPTAppRemote(configuration: configuration, logLevel: .debug)
+        appRemote.delegate = self
+        return appRemote
+    }()
+    
+    
+    //********************************************* Spotify Actions **********************************************//
+    
     func sessionManager(manager: SPTSessionManager, didFailWith error: Error) {
         presentAlertController(title: "Authorization Failed", message: error.localizedDescription, buttonTitle: "Bummer")
     }
@@ -74,19 +85,21 @@ class ViewController: UIViewController, SPTSessionManagerDelegate, SPTAppRemoteD
         appRemote.connect()
     }
 
-    // MARK: - SPTAppRemoteDelegate
     func appRemoteDidEstablishConnection(_ appRemote: SPTAppRemote) {
         
     }
 
     func appRemote(_ appRemote: SPTAppRemote, didDisconnectWithError error: Error?) {
-        lastPlayerState = nil
+        
     }
 
     func appRemote(_ appRemote: SPTAppRemote, didFailConnectionAttemptWithError error: Error?) {
-        lastPlayerState = nil
+        
     }
 
+    
+    //********************************************* Helper functions *********************************************//
+    
     private func presentAlertController(title: String, message: String, buttonTitle: String) {
         DispatchQueue.main.async {
             let controller = UIAlertController(title: title, message: message, preferredStyle: .alert)
