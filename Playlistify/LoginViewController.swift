@@ -61,8 +61,8 @@ class LoginViewController: UIViewController, SPTSessionManagerDelegate, SPTAppRe
 
         // URLs containing the secret to exchange for an access token
         // KEEP THESE COMMENTED OUT FOR REFERENCE
-        //configuration.tokenSwapURL    = URL(string: "http://localhost:1234/swap")
-        //configuration.tokenRefreshURL = URL(string: "http://localhost:1234/refresh")
+        configuration.tokenSwapURL    = URL(string: "http://localhost:1234/swap")
+        configuration.tokenRefreshURL = URL(string: "http://localhost:1234/refresh")
         return configuration
     }()
     
