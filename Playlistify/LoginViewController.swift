@@ -102,11 +102,11 @@ class LoginViewController: UIViewController, SPTSessionManagerDelegate, SPTAppRe
     }
 
     func appRemote(_ appRemote: SPTAppRemote, didDisconnectWithError error: Error?) {
-        
+        print("DISCONNECT ERROR")
     }
 
     func appRemote(_ appRemote: SPTAppRemote, didFailConnectionAttemptWithError error: Error?) {
-        
+        print("FAIL ERROR")
     }
 
     
