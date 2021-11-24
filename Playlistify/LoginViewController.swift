@@ -11,6 +11,11 @@ class LoginViewController: UIViewController, SPTSessionManagerDelegate, SPTAppRe
     // When login view is loaded
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        // TESTING FIX FOR SEGUE LOOP
+        if (appRemote.isConnected) {
+            self.performSegue(withIdentifier: "login-to-main-menu", sender: nil)
+        }
     }
     
     // Login button
@@ -19,9 +24,7 @@ class LoginViewController: UIViewController, SPTSessionManagerDelegate, SPTAppRe
         // user will have to grant permission for the scopes when running the app.
         // Scopes documentation: https://developer.spotify.com/web-api/using-scopes/.
         let scope: SPTScope = [.appRemoteControl, .playlistReadPrivate]
-        self.performSegue(withIdentifier: "login-to-main-menu", sender: nil)
         
-        /*
         if #available(iOS 11, *) {
             // Use this on iOS 11 and above to take advantage of SFAuthenticationSession
             sessionManager.initiateSession(with: scope, options: .clientOnly)
@@ -29,7 +32,6 @@ class LoginViewController: UIViewController, SPTSessionManagerDelegate, SPTAppRe
             // Use this on iOS versions < 11 to use SFSafariViewController
             sessionManager.initiateSession(with: scope, options: .clientOnly, presenting: self)
         }
-        */
     }
     
     // Segue to main menu
@@ -86,7 +88,7 @@ class LoginViewController: UIViewController, SPTSessionManagerDelegate, SPTAppRe
     }
 
     func appRemoteDidEstablishConnection(_ appRemote: SPTAppRemote) {
-        //self.performSegue(withIdentifier: "login-to-main-menu", sender: nil)
+        
     }
 
     func appRemote(_ appRemote: SPTAppRemote, didDisconnectWithError error: Error?) {
