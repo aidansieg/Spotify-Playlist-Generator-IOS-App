@@ -85,6 +85,7 @@ class LoginViewController: UIViewController, SPTSessionManagerDelegate, SPTAppRe
     
     func sessionManager(manager: SPTSessionManager, didFailWith error: Error) {
         presentAlertController(title: "Authorization Failed", message: error.localizedDescription, buttonTitle: "OK")
+        print("FAILED AUTHENTICATION")
     }
 
     func sessionManager(manager: SPTSessionManager, didRenew session: SPTSession) {
