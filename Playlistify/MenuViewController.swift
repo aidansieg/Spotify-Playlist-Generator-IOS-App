@@ -16,6 +16,9 @@ class MenuViewController: UIViewController {
         case "main-menu-to-login":
             // ADD STUFF TO PASS HERE
             break
+        case "main-menu-to-create-playlist":
+            // ADD STUFF TO PASS HERE
+            break
         default:
             preconditionFailure("Unexpected segue identifier")
             break
