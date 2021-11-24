@@ -9,16 +9,14 @@
 			<string>com.spotify.iOS-SDK-Quick-Start</string>
 			<key>CFBundleURLSchemes</key>
 			<array>
-				<string>spotify-ios-quick-start</string>
+				<string>Playlistify</string>
 			</array>
 		</dict>
 	</array>
-    
 	<key>LSApplicationQueriesSchemes</key>
-    <array>
-        <string>spotify</string>
-    </array>
-    
+	<array>
+		<string>spotify</string>
+	</array>
 	<key>UIApplicationSceneManifest</key>
 	<dict>
 		<key>UIApplicationSupportsMultipleScenes</key>
