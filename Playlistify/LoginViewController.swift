@@ -28,7 +28,7 @@ class LoginViewController: UIViewController, SPTSessionManagerDelegate, SPTAppRe
             sessionManager.initiateSession(with: scope, options: .clientOnly, presenting: self)
         }
         
-        // Navigate to the main menu only if the user was successfully able to log in to Spotify
+        // Navigate to the main menu only if the user was successfully able to login to Spotify.
         if (appRemote.isConnected || simulatorDisplayMode == true) {
             self.performSegue(withIdentifier: "login-to-main-menu", sender: nil)
         }
@@ -42,7 +42,7 @@ class LoginViewController: UIViewController, SPTSessionManagerDelegate, SPTAppRe
     //****************************************** Spotify configuration *******************************************//
     
     // Spotify authorization
-    private let SpotifyClientID    = "ClientID"
+    private let SpotifyClientID    = "<#ClientID>"
     private let SpotifyRedirectURI = URL(string: "spotify-ios-quick-start://spotify-login-callback")!
 
     // Spotify configuration for connection
