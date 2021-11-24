@@ -34,9 +34,16 @@ class LoginViewController: UIViewController, SPTSessionManagerDelegate, SPTAppRe
         }
     }
     
-    // Segue to main menu
+    // Segues from login menu
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        
+        switch segue.identifier {
+        case "login-to-main-menu":
+            // ADD STUFF TO PASS HERE
+            break
+        default:
+            preconditionFailure("Unexpected segue identifier")
+            break
+        }
     }
     
     //****************************************** Spotify configuration *******************************************//

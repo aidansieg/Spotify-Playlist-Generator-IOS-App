@@ -81,7 +81,7 @@
                                     <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </buttonConfiguration>
                                 <connections>
-                                    <segue destination="BYZ-38-t0r" kind="show" id="3gc-n8-UIa"/>
+                                    <segue destination="BYZ-38-t0r" kind="presentation" identifier="main-menu-to-login" id="3gc-n8-UIa"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qSc-Tz-gkW">
@@ -367,7 +367,6 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="pe3-dc-YLT"/>
         <segue reference="3gc-n8-UIa"/>
     </inferredMetricsTieBreakers>
     <resources>
