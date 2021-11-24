@@ -61,8 +61,8 @@ class LoginViewController: UIViewController, SPTSessionManagerDelegate, SPTAppRe
 
         // URLs containing the secret to exchange for an access token
         // KEEP THESE COMMENTED OUT FOR REFERENCE
-        configuration.tokenSwapURL    = URL(string: "http://localhost:1234/swap")
-        configuration.tokenRefreshURL = URL(string: "http://localhost:1234/refresh")
+        //configuration.tokenSwapURL    = URL(string: "http://localhost:1234/swap")
+        //configuration.tokenRefreshURL = URL(string: "http://localhost:1234/refresh")
         return configuration
     }()
     
@@ -75,6 +75,7 @@ class LoginViewController: UIViewController, SPTSessionManagerDelegate, SPTAppRe
     // Spotify app remote connection
     lazy var appRemote: SPTAppRemote = {
         let appRemote = SPTAppRemote(configuration: configuration, logLevel: .debug)
+        appRemote.connectionParameters.accessToken = "c815832c3d8b4311a57f5f132b256e9e"
         appRemote.delegate = self
         return appRemote
     }()
