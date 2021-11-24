@@ -11,11 +11,6 @@ class LoginViewController: UIViewController, SPTSessionManagerDelegate, SPTAppRe
     // When login view is loaded
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        // TESTING FIX FOR SEGUE LOOP
-        if (appRemote.isConnected) {
-            self.performSegue(withIdentifier: "login-to-main-menu", sender: nil)
-        }
     }
     
     // Login button
@@ -31,6 +26,11 @@ class LoginViewController: UIViewController, SPTSessionManagerDelegate, SPTAppRe
         } else {
             // Use this on iOS versions < 11 to use SFSafariViewController
             sessionManager.initiateSession(with: scope, options: .clientOnly, presenting: self)
+        }
+        
+        // Navigate to the main menu only if the user was successfully able to log in to Spotify
+        if (appRemote.isConnected || simulatorDisplayMode == true) {
+            self.performSegue(withIdentifier: "login-to-main-menu", sender: nil)
         }
     }
     

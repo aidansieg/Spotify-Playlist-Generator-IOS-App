@@ -13,7 +13,4 @@ class MenuViewController: UIViewController {
         super.viewDidLoad()
     }
     
-    
-    
-    
 }
