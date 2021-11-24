@@ -30,8 +30,7 @@ class LoginViewController: UIViewController, SPTSessionManagerDelegate, SPTAppRe
         
         // Navigate to the main menu only if the user was successfully able to login to Spotify.
         if (appRemote.isConnected || simulatorDisplayMode == true) {
-            print("IN IF STATEMENT")
-            //self.performSegue(withIdentifier: "login-to-main-menu", sender: nil)
+            self.performSegue(withIdentifier: "login-to-main-menu", sender: nil)
         }
     }
     
@@ -85,7 +84,6 @@ class LoginViewController: UIViewController, SPTSessionManagerDelegate, SPTAppRe
     
     func sessionManager(manager: SPTSessionManager, didFailWith error: Error) {
         presentAlertController(title: "Authorization Failed", message: error.localizedDescription, buttonTitle: "OK")
-        print("FAILED AUTHENTICATION")
     }
 
     func sessionManager(manager: SPTSessionManager, didRenew session: SPTSession) {
@@ -98,16 +96,15 @@ class LoginViewController: UIViewController, SPTSessionManagerDelegate, SPTAppRe
     }
 
     func appRemoteDidEstablishConnection(_ appRemote: SPTAppRemote) {
-        print("IN APP REMOTE ESTABLISHED")
-        self.performSegue(withIdentifier: "login-to-main-menu", sender: nil)
+        
     }
 
     func appRemote(_ appRemote: SPTAppRemote, didDisconnectWithError error: Error?) {
-        print("DISCONNECT ERROR")
+        
     }
 
     func appRemote(_ appRemote: SPTAppRemote, didFailConnectionAttemptWithError error: Error?) {
-        print("FAIL ERROR")
+        
     }
 
     
