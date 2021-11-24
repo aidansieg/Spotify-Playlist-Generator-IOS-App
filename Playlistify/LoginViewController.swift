@@ -50,7 +50,7 @@ class LoginViewController: UIViewController, SPTSessionManagerDelegate, SPTAppRe
     
     // Spotify authorization
     private let SpotifyClientID    = spotifyClientID
-    private let SpotifyRedirectURI = URL(string: "Playlistify://spotify-login-callback")!
+    private let SpotifyRedirectURI = URL(string: "spotify-ios-quick-start://spotify-login-callback")!
 
     // Spotify configuration for connection
     lazy var configuration: SPTConfiguration = {
