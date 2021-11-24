@@ -49,7 +49,7 @@ class LoginViewController: UIViewController, SPTSessionManagerDelegate, SPTAppRe
     //****************************************** Spotify configuration *******************************************//
     
     // Spotify authorization
-    private let SpotifyClientID    = "<#ClientID>"
+    private let SpotifyClientID    = spotifyClientID
     private let SpotifyRedirectURI = URL(string: "Playlistify://")!
 
     // Spotify configuration for connection
