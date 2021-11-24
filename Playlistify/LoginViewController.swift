@@ -75,11 +75,11 @@ class LoginViewController: UIViewController, SPTSessionManagerDelegate, SPTAppRe
     //********************************************* Spotify Actions **********************************************//
     
     func sessionManager(manager: SPTSessionManager, didFailWith error: Error) {
-        presentAlertController(title: "Authorization Failed", message: error.localizedDescription, buttonTitle: "Bummer")
+        presentAlertController(title: "Authorization Failed", message: error.localizedDescription, buttonTitle: "OK")
     }
 
     func sessionManager(manager: SPTSessionManager, didRenew session: SPTSession) {
-        presentAlertController(title: "Session Renewed", message: session.description, buttonTitle: "Sweet")
+        presentAlertController(title: "Session Renewed", message: session.description, buttonTitle: "OK")
     }
 
     func sessionManager(manager: SPTSessionManager, didInitiate session: SPTSession) {
