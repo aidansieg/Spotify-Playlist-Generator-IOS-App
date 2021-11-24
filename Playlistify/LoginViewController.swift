@@ -30,6 +30,7 @@ class LoginViewController: UIViewController, SPTSessionManagerDelegate, SPTAppRe
         
         // Navigate to the main menu only if the user was successfully able to login to Spotify.
         if (appRemote.isConnected || simulatorDisplayMode == true) {
+            print("IN IF STATEMENT")
             //self.performSegue(withIdentifier: "login-to-main-menu", sender: nil)
         }
     }
@@ -96,6 +97,7 @@ class LoginViewController: UIViewController, SPTSessionManagerDelegate, SPTAppRe
     }
 
     func appRemoteDidEstablishConnection(_ appRemote: SPTAppRemote) {
+        print("IN APP REMOTE ESTABLISHED")
         self.performSegue(withIdentifier: "login-to-main-menu", sender: nil)
     }
 
