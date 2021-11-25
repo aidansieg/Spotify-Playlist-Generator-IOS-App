@@ -16,42 +16,46 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" fixedFrame="YES" image="circles.hexagongrid" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="B37-PA-sHG">
-                                <rect key="frame" x="167" y="79" width="348" height="295"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="tintColor" systemColor="systemGreenColor"/>
-                            </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" fixedFrame="YES" image="circles.hexagongrid" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="oIp-yQ-ldC">
-                                <rect key="frame" x="-34" y="256" width="348" height="295"/>
+                                <rect key="frame" x="-82" y="200" width="348" height="295"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="tintColor" systemColor="systemGreenColor"/>
                             </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" fixedFrame="YES" image="circles.hexagongrid" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="qvE-1M-ayj">
-                                <rect key="frame" x="-34" y="430" width="348" height="295"/>
+                                <rect key="frame" x="-34" y="458" width="348" height="295"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="tintColor" systemColor="systemGreenColor"/>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TDX-8A-4u0">
-                                <rect key="frame" x="102" y="327" width="210" height="83"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" fixedFrame="YES" image="circles.hexagongrid" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="1Eo-QF-ysZ">
+                                <rect key="frame" x="-36" y="-65" width="348" height="295"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="tintColor" systemColor="systemGreenColor"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LDa-5I-JKB">
+                                <rect key="frame" x="102" y="327" width="210" height="83"/>
                                 <color key="tintColor" systemColor="systemYellowColor"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="Login" cornerStyle="capsule">
                                     <fontDescription key="titleFontDescription" type="system" weight="semibold" pointSize="32"/>
                                     <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <color key="baseBackgroundColor" systemColor="systemYellowColor"/>
                                 </buttonConfiguration>
                                 <connections>
-                                    <action selector="login:" destination="BYZ-38-t0r" eventType="touchUpInside" id="OPp-kx-FXN"/>
+                                    <action selector="login:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Oeq-sE-DUo"/>
                                 </connections>
                             </button>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" fixedFrame="YES" image="circles.hexagongrid" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="1Eo-QF-ysZ">
-                                <rect key="frame" x="-60" y="-32" width="348" height="295"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" fixedFrame="YES" image="circles.hexagongrid" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="B37-PA-sHG">
+                                <rect key="frame" x="158" y="114" width="348" height="295"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="tintColor" systemColor="systemGreenColor"/>
                             </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="LDa-5I-JKB" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="gNt-Jb-vZ9"/>
+                            <constraint firstItem="LDa-5I-JKB" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="hQQ-28-uK4"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="fUC-MY-vhb"/>
                     <nil key="simulatedTopBarMetrics"/>
