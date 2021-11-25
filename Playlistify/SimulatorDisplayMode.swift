@@ -2,4 +2,4 @@
 
 // On  -> true
 // Off -> false
-let simulatorDisplayMode: Bool = false
+let simulatorDisplayMode: Bool = true
