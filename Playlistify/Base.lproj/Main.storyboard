@@ -8,10 +8,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--LoginViewController-->
+        <!--Login View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController title="LoginViewController" modalPresentationStyle="fullScreen" id="BYZ-38-t0r" customClass="LoginViewController" customModule="Playlistify" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Login View Controller" modalPresentationStyle="fullScreen" id="BYZ-38-t0r" customClass="LoginViewController" customModule="Playlistify" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -84,7 +84,7 @@
                                     <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </buttonConfiguration>
                                 <connections>
-                                    <segue destination="BYZ-38-t0r" kind="presentation" identifier="main-menu-to-login" id="3gc-n8-UIa"/>
+                                    <segue destination="BYZ-38-t0r" kind="presentation" identifier="main-menu-to-login" id="Usp-8V-yss"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qSc-Tz-gkW">
@@ -96,7 +96,7 @@
                                     <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </buttonConfiguration>
                                 <connections>
-                                    <segue destination="0eE-FX-9Vq" kind="presentation" identifier="main-menu-to-create-playlist" id="Ae4-8C-znk"/>
+                                    <segue destination="0eE-FX-9Vq" kind="presentation" identifier="main-menu-to-create-playlist" id="5mf-uz-Tmz"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -110,10 +110,10 @@
             </objects>
             <point key="canvasLocation" x="3574" y="67"/>
         </scene>
-        <!--Title-->
+        <!--Title View Controller-->
         <scene sceneID="k2S-2P-2Xi">
             <objects>
-                <viewController modalPresentationStyle="fullScreen" id="0eE-FX-9Vq" sceneMemberID="viewController">
+                <viewController title="Title View Controller" modalPresentationStyle="fullScreen" id="0eE-FX-9Vq" customClass="TitleViewController" customModule="Playlistify" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="PvL-Zk-1WO">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -135,7 +135,7 @@
                                     <fontDescription key="titleFontDescription" type="boldSystem" pointSize="18"/>
                                 </buttonConfiguration>
                                 <connections>
-                                    <segue destination="MbX-ZZ-T39" kind="show" id="v2L-cj-YSt"/>
+                                    <segue destination="MbX-ZZ-T39" kind="presentation" identifier="title-page-to-genre-page" id="v2L-cj-YSt"/>
                                 </connections>
                             </button>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter name here" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="P4z-Kb-mbm">
@@ -155,11 +155,11 @@
             </objects>
             <point key="canvasLocation" x="4657.971014492754" y="-307.33695652173918"/>
         </scene>
-        <!--Genre-->
+        <!--Genre View Controller-->
         <scene sceneID="pIi-Sa-2Mh">
             <objects>
-                <viewController modalPresentationStyle="fullScreen" id="MbX-ZZ-T39" customClass="UITableViewController" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="NU6-Lo-vwO">
+                <viewController title="Genre View Controller" modalPresentationStyle="fullScreen" id="MbX-ZZ-T39" customClass="GenreViewController" customModule="Playlistify" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="NU6-Lo-vwO" customClass="UITableView">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
@@ -180,7 +180,7 @@
                                     <fontDescription key="titleFontDescription" type="boldSystem" pointSize="18"/>
                                 </buttonConfiguration>
                                 <connections>
-                                    <segue destination="S54-Ko-heP" kind="show" id="p8U-qJ-d7t"/>
+                                    <segue destination="S54-Ko-heP" kind="presentation" identifier="genre-page-to-year-page" id="wvh-9v-Bf9"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -218,7 +218,7 @@
                                     <fontDescription key="titleFontDescription" type="boldSystem" pointSize="18"/>
                                 </buttonConfiguration>
                                 <connections>
-                                    <segue destination="rry-Dh-cWW" kind="show" id="9vr-y4-C0b"/>
+                                    <segue destination="rry-Dh-cWW" kind="presentation" identifier="year-page-to-playlist-page" id="9vr-y4-C0b"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Enter a end year:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xJe-DO-lqi">
@@ -250,10 +250,10 @@
             </objects>
             <point key="canvasLocation" x="6547.826086956522" y="-307.33695652173918"/>
         </scene>
-        <!--View Controller-->
+        <!--Playlist View Controller-->
         <scene sceneID="noZ-6B-gOu">
             <objects>
-                <viewController modalPresentationStyle="fullScreen" id="rry-Dh-cWW" sceneMemberID="viewController">
+                <viewController title="Playlist View Controller" modalPresentationStyle="fullScreen" id="rry-Dh-cWW" customClass="PlaylistViewController" customModule="Playlistify" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8Oc-AD-5ha">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -309,9 +309,6 @@
             <point key="canvasLocation" x="7515.9420289855079" y="-307.33695652173918"/>
         </scene>
     </scenes>
-    <inferredMetricsTieBreakers>
-        <segue reference="pe3-dc-YLT"/>
-    </inferredMetricsTieBreakers>
     <resources>
         <image name="circles.hexagongrid" catalog="system" width="128" height="112"/>
         <systemColor name="systemBackgroundColor">
