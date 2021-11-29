@@ -60,8 +60,8 @@ class LoginViewController: UIViewController, SPTSessionManagerDelegate, SPTAppRe
         configuration.playURI = ""
 
         // URLs containing the secret to exchange for an access token
-        configuration.tokenSwapURL    = URL(string: "http://localhost:1234/swap")
-        configuration.tokenRefreshURL = URL(string: "http://localhost:1234/refresh")
+        configuration.tokenSwapURL    = URL(string: "http://Asiegel2@w3.uvm.edu/swap")
+        configuration.tokenRefreshURL = URL(string: "http://Asiegel2@w3.uvm.edu/refresh")
         return configuration
     }()
     
