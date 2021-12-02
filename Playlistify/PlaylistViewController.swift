@@ -8,8 +8,10 @@ class PlaylistViewController: UIViewController {
     @IBOutlet var playlistTitleLabel: UILabel!
     @IBOutlet var playlistYearsLabel: UILabel!
     
-    
-    var playlistTitle: String?
+    // Data passed from previous view controllers
+    var     playlistTitle: String?
+    var playlistStartYear: String?
+    var   playlistEndYear: String?
     
 
     override func viewDidLoad() {
@@ -17,7 +19,7 @@ class PlaylistViewController: UIViewController {
         
         // Additional actions
         playlistTitleLabel.text = playlistTitle
-        playlistYearsLabel.text = "2001" + "-" + "2018"
+        playlistYearsLabel.text = "\(playlistStartYear!)-\(playlistEndYear!)"
     }
     
     // Segues from the create a playlist playlist page

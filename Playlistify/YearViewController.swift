@@ -5,6 +5,9 @@
 import UIKit
 
 class YearViewController: UIViewController {
+    @IBOutlet var playlistStartYear: UITextField!
+    @IBOutlet var   playlistEndYear: UITextField!
+    
     var playlistTitle: String?
 
     override func viewDidLoad() {
@@ -16,7 +19,9 @@ class YearViewController: UIViewController {
         switch segue.identifier {
         case "year-page-to-playlist-page":
             let playlistViewController = segue.destination as! PlaylistViewController
-            playlistViewController.playlistTitle = playlistTitle
+            playlistViewController.playlistTitle     = playlistTitle
+            playlistViewController.playlistStartYear = playlistStartYear.text ?? ""
+            playlistViewController.playlistEndYear   =   playlistEndYear.text ?? ""
             break
         default:
             preconditionFailure("Unexpected segue identifier")

@@ -16,7 +16,6 @@ class TitleViewController: UIViewController {
         switch segue.identifier {
         case "title-page-to-genre-page":
             let genreViewController = segue.destination as! GenreViewController
-            playlistTitle
             genreViewController.playlistTitle = playlistTitle.text ?? ""
             break
         default:

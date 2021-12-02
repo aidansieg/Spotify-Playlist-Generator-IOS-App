@@ -303,6 +303,10 @@
                         <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </view>
                     <navigationItem key="navigationItem" title="Year" id="Yfh-Vx-o6c"/>
+                    <connections>
+                        <outlet property="playlistEndYear" destination="wKh-5W-qVI" id="5jY-Y2-9WT"/>
+                        <outlet property="playlistStartYear" destination="Gm2-fQ-8gn" id="jsk-iE-PuN"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tc4-H6-W9p" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -376,6 +380,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
+        <segue reference="9vr-y4-C0b"/>
         <segue reference="Gzk-bJ-ys6"/>
     </inferredMetricsTieBreakers>
     <resources>
