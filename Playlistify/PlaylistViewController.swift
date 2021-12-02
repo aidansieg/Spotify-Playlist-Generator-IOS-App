@@ -5,12 +5,19 @@
 import UIKit
 
 class PlaylistViewController: UIViewController {
-    var playlistTitle: String?
     @IBOutlet var playlistTitleLabel: UILabel!
+    @IBOutlet var playlistYearsLabel: UILabel!
+    
+    
+    var playlistTitle: String?
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        // Additional actions
         playlistTitleLabel.text = playlistTitle
+        playlistYearsLabel.text = "2001" + "-" + "2018"
     }
     
     // Segues from the create a playlist playlist page
