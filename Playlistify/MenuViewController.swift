@@ -16,7 +16,7 @@ class MenuViewController: UIViewController {
         case "main-menu-to-login":
             // ADD STUFF TO PASS HERE
             break
-        case "main-menu-to-create-playlist":
+        case "main-menu-to-title-page":
             // ADD STUFF TO PASS HERE
             break
         default:

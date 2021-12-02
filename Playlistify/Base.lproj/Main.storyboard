@@ -89,7 +89,7 @@
                                     <color key="baseBackgroundColor" systemColor="systemYellowColor"/>
                                 </buttonConfiguration>
                                 <connections>
-                                    <segue destination="0eE-FX-9Vq" kind="presentation" identifier="main-menu-to-create-playlist" modalTransitionStyle="crossDissolve" id="5mf-uz-Tmz"/>
+                                    <segue destination="0eE-FX-9Vq" kind="presentation" identifier="main-menu-to-title-page" modalTransitionStyle="crossDissolve" id="5mf-uz-Tmz"/>
                                 </connections>
                             </button>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" fixedFrame="YES" image="circles.hexagongrid" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="wsQ-Zj-Wn8">
@@ -375,6 +375,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
+        <segue reference="5mf-uz-Tmz"/>
         <segue reference="Gzk-bJ-ys6"/>
     </inferredMetricsTieBreakers>
     <resources>
