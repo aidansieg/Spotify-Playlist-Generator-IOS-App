@@ -89,7 +89,7 @@
                                     <color key="baseBackgroundColor" systemColor="systemYellowColor"/>
                                 </buttonConfiguration>
                                 <connections>
-                                    <segue destination="0eE-FX-9Vq" kind="presentation" identifier="main-menu-to-create-playlist" modalTransitionStyle="crossDissolve" id="5mf-uz-Tmz"/>
+                                    <segue destination="0eE-FX-9Vq" kind="presentation" identifier="main-menu-to-title-page" modalTransitionStyle="crossDissolve" id="5mf-uz-Tmz"/>
                                 </connections>
                             </button>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" fixedFrame="YES" image="circles.hexagongrid" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="wsQ-Zj-Wn8">
@@ -403,6 +403,7 @@
                     <nil key="simulatedTopBarMetrics"/>
                     <connections>
                         <outlet property="playlistTitleLabel" destination="xIl-Un-frl" id="dFt-C5-flN"/>
+                        <outlet property="playlistYearsLabel" destination="KaV-lf-AG1" id="dLN-7G-RUu"/>
                         <outlet property="view" destination="xIl-Un-frl" id="kri-IW-R0e"/>
                     </connections>
                 </viewController>
