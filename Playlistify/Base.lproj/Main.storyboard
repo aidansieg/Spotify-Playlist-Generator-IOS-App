@@ -166,15 +166,14 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="tintColor" systemColor="systemGreenColor"/>
                             </imageView>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter name here" minimumFontSize="17" background="rectangle.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="P4z-Kb-mbm">
-                                <rect key="frame" x="107.4047845184582" y="177" width="195.99999999999955" height="33.999999999999886"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter name here" minimumFontSize="17" background="rectangle.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="P4z-Kb-mbm">
+                                <rect key="frame" x="130.66666666666666" y="234" width="152.99999999999997" height="34"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JUc-LR-CCo">
-                                <rect key="frame" x="123" y="611" width="169" height="105"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JUc-LR-CCo">
+                                <rect key="frame" x="148" y="654.33333333333337" width="118" height="51.666666666666629"/>
                                 <color key="tintColor" systemColor="systemYellowColor"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="Continue" cornerStyle="capsule" buttonSize="large">
@@ -186,11 +185,10 @@
                                     <segue destination="MbX-ZZ-T39" kind="presentation" identifier="title-page-to-genre-page" modalTransitionStyle="crossDissolve" id="v2L-cj-YSt"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Name your new playlist" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="I0w-sd-Jq2">
-                                <rect key="frame" x="39.616123163890279" y="58.999999999999773" width="334.00000000000091" height="83.000000000000114"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name your new playlist" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="I0w-sd-Jq2">
+                                <rect key="frame" x="83" y="194" width="248" height="30"/>
                                 <color key="backgroundColor" red="0.88235294119999996" green="0.34509803919999998" blue="0.16078431369999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -198,8 +196,14 @@
                         <viewLayoutGuide key="safeArea" id="4jt-Es-htz"/>
                         <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="P4z-Kb-mbm" firstAttribute="centerX" secondItem="4jt-Es-htz" secondAttribute="centerX" id="GjM-eS-g3E"/>
+                            <constraint firstItem="I0w-sd-Jq2" firstAttribute="centerX" secondItem="4jt-Es-htz" secondAttribute="centerX" id="KnJ-vK-MGS"/>
+                            <constraint firstItem="P4z-Kb-mbm" firstAttribute="top" secondItem="I0w-sd-Jq2" secondAttribute="bottom" constant="10" id="P0A-ey-oA3"/>
+                            <constraint firstItem="I0w-sd-Jq2" firstAttribute="top" secondItem="4jt-Es-htz" secondAttribute="top" constant="150" id="WCp-sf-SWe"/>
+                            <constraint firstItem="4jt-Es-htz" firstAttribute="bottom" secondItem="JUc-LR-CCo" secondAttribute="bottom" constant="30" id="YxX-z2-9vh"/>
+                            <constraint firstItem="I0w-sd-Jq2" firstAttribute="top" secondItem="4jt-Es-htz" secondAttribute="top" constant="150" id="epc-Zk-p5Q"/>
                             <constraint firstItem="JUc-LR-CCo" firstAttribute="centerX" secondItem="4jt-Es-htz" secondAttribute="centerX" id="oiQ-Qs-XaC"/>
-                            <constraint firstItem="4jt-Es-htz" firstAttribute="bottom" secondItem="JUc-LR-CCo" secondAttribute="bottom" constant="96" id="ss2-De-X8K"/>
+                            <constraint firstItem="4jt-Es-htz" firstAttribute="bottom" secondItem="JUc-LR-CCo" secondAttribute="bottom" constant="30" id="sSv-Wd-1ak"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Title" id="yv0-eO-THl"/>
@@ -228,14 +232,13 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="N3a-l0-yYd">
-                                <rect key="frame" x="108" y="554" width="199" height="107"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" systemColor="systemYellowColor"/>
-                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="N3a-l0-yYd">
+                                <rect key="frame" x="148" y="654.33333333333337" width="118" height="51.666666666666629"/>
+                                <color key="tintColor" systemColor="systemYellowColor"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Continue">
+                                <buttonConfiguration key="configuration" style="filled" title="Continue" cornerStyle="capsule" buttonSize="large">
                                     <fontDescription key="titleFontDescription" type="boldSystem" pointSize="18"/>
+                                    <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </buttonConfiguration>
                                 <connections>
                                     <segue destination="S54-Ko-heP" kind="presentation" identifier="genre-page-to-year-page" modalTransitionStyle="crossDissolve" id="wvh-9v-Bf9"/>
@@ -244,6 +247,10 @@
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vCX-sx-SLe"/>
                         <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="N3a-l0-yYd" firstAttribute="centerX" secondItem="vCX-sx-SLe" secondAttribute="centerX" id="XzG-8i-J3I"/>
+                            <constraint firstItem="vCX-sx-SLe" firstAttribute="bottom" secondItem="N3a-l0-yYd" secondAttribute="bottom" constant="30" id="hhY-tr-V0V"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Genre" id="OtF-v2-0xe"/>
                 </viewController>
@@ -259,48 +266,78 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Enter a start year:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tjp-5g-4lg">
-                                <rect key="frame" x="20" y="44" width="377" height="76"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" fixedFrame="YES" image="circles.hexagongrid" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="ZRR-wY-lWj">
+                                <rect key="frame" x="140" y="549" width="348" height="295"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="tintColor" systemColor="systemGreenColor"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" fixedFrame="YES" image="circles.hexagongrid" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="MFa-pE-iaI">
+                                <rect key="frame" x="187" y="293" width="348" height="295"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="tintColor" systemColor="systemGreenColor"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" fixedFrame="YES" image="circles.hexagongrid" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="Cv4-so-B54">
+                                <rect key="frame" x="-76" y="-12" width="348" height="295"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="tintColor" systemColor="systemGreenColor"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" fixedFrame="YES" image="circles.hexagongrid" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="dAx-lU-b0G">
+                                <rect key="frame" x="-191" y="260" width="348" height="295"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="tintColor" systemColor="systemGreenColor"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enter a start year:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tjp-5g-4lg">
+                                <rect key="frame" x="114.00000000000001" y="125" width="186.33333333333337" height="30"/>
+                                <color key="backgroundColor" red="0.88235294119999996" green="0.34509803919999998" blue="0.16078431369999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mij-bQ-y7b">
-                                <rect key="frame" x="103" y="548" width="211" height="108"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" systemColor="systemYellowColor"/>
-                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mij-bQ-y7b">
+                                <rect key="frame" x="124.66666666666667" y="654.33333333333337" width="164.66666666666663" height="51.666666666666629"/>
+                                <color key="tintColor" systemColor="systemYellowColor"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Create Playlist">
+                                <buttonConfiguration key="configuration" style="filled" title="Create Playlist" cornerStyle="capsule" buttonSize="large">
                                     <fontDescription key="titleFontDescription" type="boldSystem" pointSize="18"/>
+                                    <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </buttonConfiguration>
                                 <connections>
                                     <segue destination="rry-Dh-cWW" kind="presentation" identifier="year-page-to-playlist-page" modalTransitionStyle="crossDissolve" id="9vr-y4-C0b"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Enter a end year:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xJe-DO-lqi">
-                                <rect key="frame" x="20" y="269" width="377" height="76"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enter a end year:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xJe-DO-lqi">
+                                <rect key="frame" x="117.66666666666667" y="299" width="178.66666666666663" height="30"/>
+                                <color key="backgroundColor" red="0.88235294119999996" green="0.34509803919999998" blue="0.16078431369999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter a start year" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Gm2-fQ-8gn">
-                                <rect key="frame" x="140" y="128" width="132" height="34"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter a start year" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Gm2-fQ-8gn">
+                                <rect key="frame" x="137.66666666666666" y="165" width="138.99999999999997" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter an end year" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="wKh-5W-qVI">
-                                <rect key="frame" x="140" y="353" width="132" height="34"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter an end year" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="wKh-5W-qVI">
+                                <rect key="frame" x="136.33333333333331" y="339" width="141.33333333333331" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="gbZ-Bz-g6g"/>
                         <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="tjp-5g-4lg" firstAttribute="centerX" secondItem="gbZ-Bz-g6g" secondAttribute="centerX" id="0yv-YV-GfL"/>
+                            <constraint firstItem="gbZ-Bz-g6g" firstAttribute="bottom" secondItem="Mij-bQ-y7b" secondAttribute="bottom" constant="30" id="3Xw-Cd-nxm"/>
+                            <constraint firstItem="tjp-5g-4lg" firstAttribute="top" secondItem="gbZ-Bz-g6g" secondAttribute="top" constant="125" id="5mG-O2-YSL"/>
+                            <constraint firstItem="wKh-5W-qVI" firstAttribute="top" secondItem="xJe-DO-lqi" secondAttribute="bottom" constant="10" id="7q3-Rq-jhZ"/>
+                            <constraint firstItem="wKh-5W-qVI" firstAttribute="centerX" secondItem="gbZ-Bz-g6g" secondAttribute="centerX" id="JZz-xN-v8x"/>
+                            <constraint firstItem="Gm2-fQ-8gn" firstAttribute="centerX" secondItem="gbZ-Bz-g6g" secondAttribute="centerX" id="K4r-VO-AX8"/>
+                            <constraint firstItem="xJe-DO-lqi" firstAttribute="top" secondItem="Gm2-fQ-8gn" secondAttribute="bottom" constant="100" id="MmF-Y7-ezh"/>
+                            <constraint firstItem="Gm2-fQ-8gn" firstAttribute="top" secondItem="tjp-5g-4lg" secondAttribute="bottom" constant="10" id="hOq-XJ-sih"/>
+                            <constraint firstItem="Mij-bQ-y7b" firstAttribute="centerX" secondItem="gbZ-Bz-g6g" secondAttribute="centerX" id="l8M-OG-4PF"/>
+                            <constraint firstItem="xJe-DO-lqi" firstAttribute="centerX" secondItem="gbZ-Bz-g6g" secondAttribute="centerX" id="lbf-b2-HWN"/>
+                            <constraint firstItem="tjp-5g-4lg" firstAttribute="top" secondItem="gbZ-Bz-g6g" secondAttribute="top" constant="125" id="mPT-Do-pHC"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Year" id="Yfh-Vx-o6c"/>
                 </viewController>
@@ -375,6 +412,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
+        <segue reference="9vr-y4-C0b"/>
         <segue reference="Gzk-bJ-ys6"/>
     </inferredMetricsTieBreakers>
     <resources>
