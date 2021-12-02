@@ -5,8 +5,13 @@
 import UIKit
 
 class GenreViewController: UITableViewController {
+    // Outlets
+    // ADD HERE
+    
+    // Data passed from previous view controllers
     var playlistTitle: String?
 
+    // View actions
     override func viewDidLoad() {
         super.viewDidLoad()
     }

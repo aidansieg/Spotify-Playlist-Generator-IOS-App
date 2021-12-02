@@ -8,7 +8,7 @@ class LoginViewController: UIViewController, SPTSessionManagerDelegate, SPTAppRe
     
     //*************************************** Login Screen Display/Actions ***************************************//
     
-    // When login view is loaded
+    // View actions
     override func viewDidLoad() {
         super.viewDidLoad()
     }

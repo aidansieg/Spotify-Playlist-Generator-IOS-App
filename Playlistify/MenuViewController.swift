@@ -6,6 +6,7 @@ import UIKit
 
 class MenuViewController: UIViewController {
 
+    // View actions
     override func viewDidLoad() {
         super.viewDidLoad()
     }

@@ -5,8 +5,10 @@
 import UIKit
 
 class TitleViewController: UIViewController {
+    // Outlets
     @IBOutlet var playlistTitle: UITextField!
 
+    // View actions
     override func viewDidLoad() {
         super.viewDidLoad()
     }
@@ -16,7 +18,7 @@ class TitleViewController: UIViewController {
         switch segue.identifier {
         case "title-page-to-genre-page":
             let genreViewController = segue.destination as! GenreViewController
-            genreViewController.playlistTitle = playlistTitle.text ?? ""
+            genreViewController.playlistTitle = playlistTitle.text
             break
         default:
             preconditionFailure("Unexpected segue identifier")

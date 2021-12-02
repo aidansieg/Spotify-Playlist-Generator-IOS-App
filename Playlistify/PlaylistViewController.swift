@@ -5,6 +5,7 @@
 import UIKit
 
 class PlaylistViewController: UIViewController {
+    // Outlets
     @IBOutlet var playlistTitleLabel: UILabel!
     @IBOutlet var playlistYearsLabel: UILabel!
     
@@ -13,13 +14,13 @@ class PlaylistViewController: UIViewController {
     var playlistStartYear: String?
     var   playlistEndYear: String?
     
-
+    // View actions
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        // Additional actions
-        playlistTitleLabel.text = playlistTitle
-        playlistYearsLabel.text = "\(playlistStartYear!)-\(playlistEndYear!)"
+        // Labels
+        playlistTitleLabel.text = playlistTitle ?? ""
+        playlistYearsLabel.text = "\(playlistStartYear ?? "")-\(playlistEndYear ?? "")"
     }
     
     // Segues from the create a playlist playlist page
