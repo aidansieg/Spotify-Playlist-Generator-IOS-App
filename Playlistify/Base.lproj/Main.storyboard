@@ -176,7 +176,7 @@
                                 <rect key="frame" x="148" y="654.33333333333337" width="118" height="51.666666666666629"/>
                                 <color key="tintColor" systemColor="systemYellowColor"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="filled" title="Continue" cornerStyle="capsule" buttonSize="large">
+                                <buttonConfiguration key="configuration" style="filled" title="Continue" cornerStyle="large" buttonSize="large">
                                     <fontDescription key="titleFontDescription" type="boldSystem" pointSize="18"/>
                                     <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <color key="baseBackgroundColor" systemColor="systemYellowColor"/>
@@ -236,7 +236,7 @@
                                 <rect key="frame" x="148" y="654.33333333333337" width="118" height="51.666666666666629"/>
                                 <color key="tintColor" systemColor="systemYellowColor"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="filled" title="Continue" cornerStyle="capsule" buttonSize="large">
+                                <buttonConfiguration key="configuration" style="filled" title="Continue" cornerStyle="large" buttonSize="large">
                                     <fontDescription key="titleFontDescription" type="boldSystem" pointSize="18"/>
                                     <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </buttonConfiguration>
@@ -297,7 +297,7 @@
                                 <rect key="frame" x="124.66666666666667" y="654.33333333333337" width="164.66666666666663" height="51.666666666666629"/>
                                 <color key="tintColor" systemColor="systemYellowColor"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="filled" title="Create Playlist" cornerStyle="capsule" buttonSize="large">
+                                <buttonConfiguration key="configuration" style="filled" title="Create Playlist" cornerStyle="large" buttonSize="large">
                                     <fontDescription key="titleFontDescription" type="boldSystem" pointSize="18"/>
                                     <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </buttonConfiguration>
@@ -357,19 +357,32 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" fixedFrame="YES" image="circles.hexagongrid" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="J6a-2e-MB6">
+                                <rect key="frame" x="-120" y="533" width="348" height="295"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="tintColor" systemColor="systemGreenColor"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" fixedFrame="YES" image="circles.hexagongrid" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="8hr-hg-ds4">
+                                <rect key="frame" x="248" y="220.00000000000011" width="348" height="295"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="tintColor" systemColor="systemGreenColor"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" fixedFrame="YES" image="circles.hexagongrid" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="fZa-vt-VlH">
+                                <rect key="frame" x="-108" y="-63" width="348" height="295"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="tintColor" systemColor="systemGreenColor"/>
+                            </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="*PLAYLIST NAME*" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xIl-Un-frl">
                                 <rect key="frame" x="136.33333333333331" y="100" width="141.33333333333331" height="20.333333333333329"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gOx-qM-kZi">
-                                <rect key="frame" x="104" y="557" width="179" height="113"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gOx-qM-kZi">
+                                <rect key="frame" x="140.33333333333337" y="654.33333333333337" width="133.66666666666663" height="51.666666666666629"/>
                                 <color key="tintColor" systemColor="systemYellowColor"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="filled" title="Main Menu">
+                                <buttonConfiguration key="configuration" style="filled" title="Main Menu" cornerStyle="large" buttonSize="large">
                                     <fontDescription key="titleFontDescription" type="boldSystem" pointSize="18"/>
                                     <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </buttonConfiguration>
@@ -399,6 +412,8 @@
                             <constraint firstItem="ge9-Ib-6Ne" firstAttribute="top" secondItem="xIl-Un-frl" secondAttribute="bottom" constant="50" id="OM0-GQ-rBG"/>
                             <constraint firstItem="KaV-lf-AG1" firstAttribute="centerX" secondItem="zIG-Yl-LAf" secondAttribute="centerX" id="TcG-JD-h7i"/>
                             <constraint firstItem="KaV-lf-AG1" firstAttribute="top" secondItem="ge9-Ib-6Ne" secondAttribute="bottom" constant="50" id="U0a-HQ-m7A"/>
+                            <constraint firstItem="gOx-qM-kZi" firstAttribute="centerX" secondItem="zIG-Yl-LAf" secondAttribute="centerX" id="WUQ-L2-e4e"/>
+                            <constraint firstItem="zIG-Yl-LAf" firstAttribute="bottom" secondItem="gOx-qM-kZi" secondAttribute="bottom" constant="30" id="ky6-8j-OXi"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="b4f-q1-ydd"/>
@@ -415,7 +430,6 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="9vr-y4-C0b"/>
         <segue reference="Gzk-bJ-ys6"/>
     </inferredMetricsTieBreakers>
     <resources>
