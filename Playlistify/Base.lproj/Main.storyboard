@@ -204,6 +204,9 @@
                     </view>
                     <navigationItem key="navigationItem" title="Title" id="yv0-eO-THl"/>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+                    <connections>
+                        <outlet property="playlistTitle" destination="P4z-Kb-mbm" id="fdH-eB-sRI"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dTk-ox-a8l" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -248,10 +251,10 @@
             </objects>
             <point key="canvasLocation" x="5589.8550724637689" y="-307.33695652173918"/>
         </scene>
-        <!--Year-->
+        <!--Year View Controller-->
         <scene sceneID="hBE-Ff-zfk">
             <objects>
-                <viewController modalPresentationStyle="fullScreen" id="S54-Ko-heP" sceneMemberID="viewController">
+                <viewController title="Year View Controller" modalPresentationStyle="fullScreen" id="S54-Ko-heP" customClass="YearViewController" customModule="Playlistify" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="sfC-vL-eEW">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -330,6 +333,9 @@
                                     <fontDescription key="titleFontDescription" type="boldSystem" pointSize="18"/>
                                     <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </buttonConfiguration>
+                                <connections>
+                                    <segue destination="iez-4D-05f" kind="presentation" identifier="playlist-page-to-main-menu" id="Gzk-bJ-ys6"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tns-Io-fdR">
                                 <rect key="frame" x="172" y="115" width="45" height="21"/>
@@ -358,12 +364,19 @@
                     </view>
                     <navigationItem key="navigationItem" id="b4f-q1-ydd"/>
                     <nil key="simulatedTopBarMetrics"/>
+                    <connections>
+                        <outlet property="playlistTitleLabel" destination="xIl-Un-frl" id="dFt-C5-flN"/>
+                        <outlet property="view" destination="xIl-Un-frl" id="kri-IW-R0e"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VmS-tZ-FrE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="7515.9420289855079" y="-307.33695652173918"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="Gzk-bJ-ys6"/>
+    </inferredMetricsTieBreakers>
     <resources>
         <image name="circles.hexagongrid" catalog="system" width="128" height="112"/>
         <image name="rectangle.fill" catalog="system" width="128" height="93"/>

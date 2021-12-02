@@ -5,6 +5,7 @@
 import UIKit
 
 class GenreViewController: UITableViewController {
+    var playlistTitle: String?
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -14,7 +15,8 @@ class GenreViewController: UITableViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         switch segue.identifier {
         case "genre-page-to-year-page":
-            // ADD STUFF TO PASS HERE
+            let yearViewController = segue.destination as! YearViewController
+            yearViewController.playlistTitle = playlistTitle
             break
         default:
             preconditionFailure("Unexpected segue identifier")
