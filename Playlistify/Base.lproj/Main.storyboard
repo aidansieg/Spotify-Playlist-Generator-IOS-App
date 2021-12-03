@@ -419,6 +419,7 @@
                     <navigationItem key="navigationItem" id="b4f-q1-ydd"/>
                     <nil key="simulatedTopBarMetrics"/>
                     <connections>
+                        <outlet property="playlistGenreLabel" destination="ge9-Ib-6Ne" id="0zJ-67-yyK"/>
                         <outlet property="playlistTitleLabel" destination="xIl-Un-frl" id="dFt-C5-flN"/>
                         <outlet property="playlistYearsLabel" destination="KaV-lf-AG1" id="dLN-7G-RUu"/>
                         <outlet property="view" destination="xIl-Un-frl" id="kri-IW-R0e"/>

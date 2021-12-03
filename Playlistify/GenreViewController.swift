@@ -10,16 +10,16 @@ class GenreViewController: UITableViewController {
     
     // Data passed from previous view controllers
     var playlistGenres: [String] = []
-    var  playlistTitle: String?
-    
-    // HARD CODED GENRES FOR TESTING
-    playlistGenres.append("EDM");
-    playlistGenres.append("Hip-Hop");
-    playlistGenres.append("Pop");
+    var  playlistTitle: String!
     
     // View actions
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        // HARD-CODED GENRES FOR TESTING
+        self.playlistGenres.append("EDM")
+        self.playlistGenres.append("Hip-Hop")
+        self.playlistGenres.append("Pop")
     }
     
     // Segues from the create a playlist genre page
@@ -27,7 +27,7 @@ class GenreViewController: UITableViewController {
         switch segue.identifier {
         case "genre-page-to-year-page":
             let yearViewController = segue.destination as! YearViewController
-            //yearViewController.playlistGenres = playlistGenres
+            yearViewController.playlistGenres = playlistGenres
             yearViewController.playlistTitle  = playlistTitle
             break
         default:
@@ -35,5 +35,4 @@ class GenreViewController: UITableViewController {
             break
         }
     }
-    
 }

@@ -10,8 +10,8 @@ class YearViewController: UIViewController {
     @IBOutlet var   playlistEndYear: UITextField!
     
     // Data passed from previous view controllers
-    //var playlistGenres: [String]!
-    var  playlistTitle: String?
+    var playlistGenres: [String]!
+    var  playlistTitle: String!
 
     // View actions
     override func viewDidLoad() {
@@ -23,7 +23,7 @@ class YearViewController: UIViewController {
         switch segue.identifier {
         case "year-page-to-playlist-page":
             let playlistViewController = segue.destination as! PlaylistViewController
-            //playlistViewController.playlistGenres    = playlistTest
+            playlistViewController.playlistGenres    = playlistGenres
             playlistViewController.playlistTitle     = playlistTitle
             playlistViewController.playlistStartYear = playlistStartYear.text
             playlistViewController.playlistEndYear   = playlistEndYear.text
@@ -33,5 +33,4 @@ class YearViewController: UIViewController {
             break
         }
     }
-    
 }

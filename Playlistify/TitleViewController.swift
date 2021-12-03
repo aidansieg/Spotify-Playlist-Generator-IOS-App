@@ -7,10 +7,10 @@ import UIKit
 class TitleViewController: UIViewController {
     // Outlets
     @IBOutlet var playlistTitle: UITextField!
-
+    
     // View actions
     override func viewDidLoad() {
-        super.viewDidLoad()
+         super.viewDidLoad()
     }
     
     // Segues from the create a playlist title page
@@ -25,5 +25,4 @@ class TitleViewController: UIViewController {
             break
         }
     }
-    
 }

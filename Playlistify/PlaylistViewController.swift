@@ -11,19 +11,19 @@ class PlaylistViewController: UIViewController {
     @IBOutlet var playlistYearsLabel: UILabel!
     
     // Data passed from previous view controllers
-    //var    playlistGenres: [String]!
-    var     playlistTitle: String?
-    var playlistStartYear: String?
-    var   playlistEndYear: String?
+    var    playlistGenres: [String]!
+    var     playlistTitle: String!
+    var playlistStartYear: String!
+    var   playlistEndYear: String!
     
     // View actions
     override func viewDidLoad() {
         super.viewDidLoad()
         
         // Labels
-        playlistTitleLabel.text = playlistTitle ?? ""
-        //playlistGenreLabel.text = "\(playlistGenres[0])"
-        playlistYearsLabel.text = "\(playlistStartYear ?? "")-\(playlistEndYear ?? "")"
+        playlistTitleLabel.text = playlistTitle
+        playlistGenreLabel.text = "\(playlistGenres!)"
+        playlistYearsLabel.text = "\(playlistStartYear!)-\(playlistEndYear!)"
     }
     
     // Segues from the create a playlist playlist page
@@ -37,5 +37,4 @@ class PlaylistViewController: UIViewController {
             break
         }
     }
-    
 }

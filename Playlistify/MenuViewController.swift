@@ -9,6 +9,7 @@ class MenuViewController: UIViewController {
     // View actions
     override func viewDidLoad() {
         super.viewDidLoad()
+
     }
     
     // Segues from main menu
@@ -25,5 +26,4 @@ class MenuViewController: UIViewController {
             break
         }
     }
-    
 }
