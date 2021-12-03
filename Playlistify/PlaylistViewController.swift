@@ -6,10 +6,12 @@ import UIKit
 
 class PlaylistViewController: UIViewController {
     // Outlets
+    @IBOutlet var playlistGenreLabel: UILabel!
     @IBOutlet var playlistTitleLabel: UILabel!
     @IBOutlet var playlistYearsLabel: UILabel!
     
     // Data passed from previous view controllers
+    //var    playlistGenres: [String]!
     var     playlistTitle: String?
     var playlistStartYear: String?
     var   playlistEndYear: String?
@@ -20,6 +22,7 @@ class PlaylistViewController: UIViewController {
         
         // Labels
         playlistTitleLabel.text = playlistTitle ?? ""
+        //playlistGenreLabel.text = "\(playlistGenres[0])"
         playlistYearsLabel.text = "\(playlistStartYear ?? "")-\(playlistEndYear ?? "")"
     }
     

@@ -9,8 +9,14 @@ class GenreViewController: UITableViewController {
     // ADD HERE
     
     // Data passed from previous view controllers
-    var playlistTitle: String?
-
+    var playlistGenres: [String] = []
+    var  playlistTitle: String?
+    
+    // HARD CODED GENRES FOR TESTING
+    playlistGenres.append("EDM");
+    playlistGenres.append("Hip-Hop");
+    playlistGenres.append("Pop");
+    
     // View actions
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,7 +27,8 @@ class GenreViewController: UITableViewController {
         switch segue.identifier {
         case "genre-page-to-year-page":
             let yearViewController = segue.destination as! YearViewController
-            yearViewController.playlistTitle = playlistTitle
+            //yearViewController.playlistGenres = playlistGenres
+            yearViewController.playlistTitle  = playlistTitle
             break
         default:
             preconditionFailure("Unexpected segue identifier")
