@@ -6,8 +6,6 @@ import UIKit
 
 class LoginViewController: UIViewController, SPTSessionManagerDelegate, SPTAppRemoteDelegate  {
     
-    //*************************************** Login Screen Display/Actions ***************************************//
-    
     // View actions
     override func viewDidLoad() {
         super.viewDidLoad()

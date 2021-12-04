@@ -28,6 +28,27 @@ class GenreViewController: UITableViewController {
     @IBAction func continueToNextPage(_ sender: UIButton) {
         self.performSegue(withIdentifier: "genre-page-to-year-page", sender: nil)
     }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        tableView.reloadData()
+    }
+    
+    // Segues from the create a playlist genre page
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        switch segue.identifier {
+        case "genre-page-to-year-page":
+            let yearViewController = segue.destination as! YearViewController
+            yearViewController.playlistGenres = playlistGenres
+            yearViewController.playlistTitle  = playlistTitle
+            break
+        default:
+            preconditionFailure("Unexpected segue identifier")
+            break
+        }
+    }
+    
+    //***************************************** Table View Configuration *****************************************//
 
     // Define how many rows to display graphically
     override func tableView(_ tableView: UITableView,
@@ -92,23 +113,4 @@ class GenreViewController: UITableViewController {
            // Display pop up when delete clicked
            present(alertController, animated: true, completion: nil)
        }*/
-    
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        tableView.reloadData()
-    }
-    
-    // Segues from the create a playlist genre page
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        switch segue.identifier {
-        case "genre-page-to-year-page":
-            let yearViewController = segue.destination as! YearViewController
-            yearViewController.playlistGenres = playlistGenres
-            yearViewController.playlistTitle  = playlistTitle
-            break
-        default:
-            preconditionFailure("Unexpected segue identifier")
-            break
-        }
-    }
 }
