@@ -109,7 +109,7 @@ class LoginViewController: UIViewController, SPTSessionManagerDelegate, SPTAppRe
     
     //********************************************* Helper functions *********************************************//
     
-    private func presentAlertController(title: String, message: String, buttonTitle: String) {
+    func presentAlertController(title: String, message: String, buttonTitle: String) {
         DispatchQueue.main.async {
             let controller = UIAlertController(title: title, message: message, preferredStyle: .alert)
             let action     = UIAlertAction(title: buttonTitle, style: .default, handler: nil)

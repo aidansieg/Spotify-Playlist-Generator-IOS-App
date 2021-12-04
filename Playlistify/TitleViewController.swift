@@ -15,19 +15,14 @@ class TitleViewController: UIViewController {
     
     // Continue button
     @IBAction func continueToNextPage(_ sender: UIButton) {
-        if let test = playlistTitle.text {
-            if test.count >= 5 && test.count <= 20 {
+        if let title = playlistTitle.text {
+            // Title length check
+            if self.validateTitle(title) {
                 self.performSegue(withIdentifier: "title-page-to-genre-page", sender: nil)
             } else {
-                // PLAYLIST TITLE ALERT STYLE CAN BE EDITED HERE
-                DispatchQueue.main.async {
-                    let controller = UIAlertController(title: "Invalid Playlist Title", message: "Playlist title must be between 5 and 20 characters.",
-                                                       preferredStyle: .alert)
-                    let action     = UIAlertAction(title: "OK", style: .default, handler: nil)
-                    
-                    controller.addAction(action)
-                    self.present(controller, animated: true)
-                }
+                self.presentAlertController(title: "Invalid Playlist Title",
+                                            message: "Playlist title must be between 5 and 15 characters.",
+                                            buttonTitle: "OK")
             }
         }
     }
@@ -42,6 +37,27 @@ class TitleViewController: UIViewController {
         default:
             preconditionFailure("Unexpected segue identifier")
             break
+        }
+    }
+    
+    //********************************************* Helper functions *********************************************//
+    
+    // Used to make sure playlist title is a valid length
+    func validateTitle(_ title: String) -> Bool {
+        if (title.count >= 5 && title.count <= 15) {
+            return true
+        } else {
+            return false
+        }
+    }
+    
+    func presentAlertController(title: String, message: String, buttonTitle: String) {
+        DispatchQueue.main.async {
+            let controller = UIAlertController(title: title, message: message, preferredStyle: .alert)
+            let action     = UIAlertAction(title: buttonTitle, style: .default, handler: nil)
+            
+            controller.addAction(action)
+            self.present(controller, animated: true)
         }
     }
 }
