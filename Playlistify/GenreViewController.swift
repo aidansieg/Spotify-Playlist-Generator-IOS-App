@@ -24,28 +24,33 @@ class GenreViewController: UITableViewController {
         self.playlistGenres.append("Pop")
     }
     
-      // Define how many rows to display graphically
-       override func tableView(_ tableView: UITableView,
-                               numberOfRowsInSection section: Int) -> Int {
-           return self.playlistGenres.count
-       }
+    // Continue button
+    @IBAction func continueToNextPage(_ sender: UIButton) {
+        self.performSegue(withIdentifier: "genre-page-to-year-page", sender: nil)
+    }
+
+    // Define how many rows to display graphically
+    override func tableView(_ tableView: UITableView,
+                            numberOfRowsInSection section: Int) -> Int {
+        return self.playlistGenres.count
+    }
        
-       // Define how to display rows graphically
-       override func tableView(_ tableView: UITableView,
-                               cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-           // Get a new cell or use an old one that is not in use anymore
-           let cell = tableView.dequeueReusableCell(withIdentifier: "GenreCell",
-                                                    for: indexPath) as! GenreCell
+    // Define how to display rows graphically
+    override func tableView(_ tableView: UITableView,
+                            cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        // Get a new cell or use an old one that is not in use anymore
+        let cell = tableView.dequeueReusableCell(withIdentifier: "GenreCell",
+                                                for: indexPath) as! GenreCell
            
-           // Set text in the cell to correspond with data at the nth index of items, where
-           // n = row the cell will appear in on the table view
-           let genre = self.playlistGenres[indexPath.row]
+        // Set text in the cell to correspond with data at the nth index of items, where
+        // n = row the cell will appear in on the table view
+        let genre = self.playlistGenres[indexPath.row]
            
-           // Cell components to display
-           cell.genreLabel.text = genre
+        // Cell components to display
+        cell.genreLabel.text = genre
            
-           return cell
-       }
+        return cell
+    }
        
         /*
        // Define how to move rows graphically

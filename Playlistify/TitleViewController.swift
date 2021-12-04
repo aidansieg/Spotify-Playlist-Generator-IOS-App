@@ -16,10 +16,18 @@ class TitleViewController: UIViewController {
     // Continue button
     @IBAction func continueToNextPage(_ sender: UIButton) {
         if let test = playlistTitle.text {
-            if test.count > 0 {
+            if test.count >= 5 && test.count <= 20 {
                 self.performSegue(withIdentifier: "title-page-to-genre-page", sender: nil)
             } else {
-                // DISPLAY MESSAGE TELLING USER TO ENTER VALID TITLE HERE
+                // PLAYLIST TITLE ALERT STYLE CAN BE EDITED HERE
+                DispatchQueue.main.async {
+                    let controller = UIAlertController(title: "Invalid Playlist Title", message: "Playlist title must be between 5 and 20 characters.",
+                                                       preferredStyle: .alert)
+                    let action     = UIAlertAction(title: "OK", style: .default, handler: nil)
+                    
+                    controller.addAction(action)
+                    self.present(controller, animated: true)
+                }
             }
         }
     }
