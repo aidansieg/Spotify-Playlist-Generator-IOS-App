@@ -13,6 +13,17 @@ class TitleViewController: UIViewController {
          super.viewDidLoad()
     }
     
+    // Continue button
+    @IBAction func continueToNextPage(_ sender: UIButton) {
+        if let test = playlistTitle.text {
+            if test.count > 0 {
+                self.performSegue(withIdentifier: "title-page-to-genre-page", sender: nil)
+            } else {
+                // DISPLAY MESSAGE TELLING USER TO ENTER VALID TITLE HERE
+            }
+        }
+    }
+    
     // Segues from the create a playlist title page
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         switch segue.identifier {
