@@ -210,17 +210,17 @@
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                     <connections>
                         <outlet property="playlistTitle" destination="P4z-Kb-mbm" id="fdH-eB-sRI"/>
-                        <segue destination="MbX-ZZ-T39" kind="presentation" identifier="title-page-to-genre-page" id="Ke9-wu-Cde"/>
+                        <segue destination="UPh-OS-z7F" kind="presentation" identifier="title-page-to-genre-page" id="iBj-I9-KmZ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dTk-ox-a8l" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="4657.971014492754" y="-307.33695652173918"/>
         </scene>
-        <!--Genre View Controller-->
+        <!--Old Genre Stuff to Transfer Over-->
         <scene sceneID="pIi-Sa-2Mh">
             <objects>
-                <viewController title="Genre View Controller" modalPresentationStyle="fullScreen" id="MbX-ZZ-T39" customClass="GenreViewController" customModule="Playlistify" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Old Genre Stuff to Transfer Over" modalPresentationStyle="fullScreen" id="MbX-ZZ-T39" customClass="GenreViewController" customModule="Playlistify" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="NU6-Lo-vwO" customClass="UITableView">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -249,9 +249,6 @@
                                         </label>
                                     </subviews>
                                 </tableViewCellContentView>
-                                <connections>
-                                    <outlet property="genreLabel" destination="Cs4-xg-mXg" id="Aa8-Tn-i7Q"/>
-                                </connections>
                             </tableViewCell>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="N3a-l0-yYd">
                                 <rect key="frame" x="148" y="654.33333333333337" width="118" height="51.666666666666629"/>
@@ -261,9 +258,6 @@
                                     <fontDescription key="titleFontDescription" type="boldSystem" pointSize="18"/>
                                     <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </buttonConfiguration>
-                                <connections>
-                                    <segue destination="S54-Ko-heP" kind="presentation" identifier="genre-page-to-year-page" modalTransitionStyle="crossDissolve" id="wvh-9v-Bf9"/>
-                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vCX-sx-SLe"/>
@@ -277,7 +271,50 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VAy-O3-EOg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5589.8550724637689" y="-307.33695652173918"/>
+            <point key="canvasLocation" x="5317" y="396"/>
+        </scene>
+        <!--Genre View Controller-->
+        <scene sceneID="zO5-Yc-1pj">
+            <objects>
+                <tableViewController modalPresentationStyle="fullScreen" id="UPh-OS-z7F" customClass="GenreViewController" customModule="Playlistify" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="gqr-Cq-Khh">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="GenreCell" id="iWe-Da-4bv" customClass="GenreCell" customModule="Playlistify" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="44.666666030883789" width="414" height="43.666667938232422"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="iWe-Da-4bv" id="1Oh-bG-RUX">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.666667938232422"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rkB-Fj-a55">
+                                            <rect key="frame" x="186" y="11" width="42" height="21"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="genreLabel" destination="rkB-Fj-a55" id="L42-iz-8O9"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="UPh-OS-z7F" id="cON-1G-IaN"/>
+                            <outlet property="delegate" destination="UPh-OS-z7F" id="bPt-a5-25Q"/>
+                        </connections>
+                    </tableView>
+                    <connections>
+                        <segue destination="S54-Ko-heP" kind="presentation" identifier="genre-page-to-year-page" id="zwc-qr-pU3"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Z0H-8v-3H0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="5601" y="-298"/>
         </scene>
         <!--Year View Controller-->
         <scene sceneID="hBE-Ff-zfk">
@@ -452,12 +489,15 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="Ke9-wu-Cde"/>
+        <segue reference="zwc-qr-pU3"/>
         <segue reference="Gzk-bJ-ys6"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="circles.hexagongrid" catalog="system" width="128" height="112"/>
         <image name="rectangle.fill" catalog="system" width="128" height="93"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
         <systemColor name="systemGreenColor">
             <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
