@@ -21,7 +21,7 @@ class TitleViewController: UIViewController {
                 self.performSegue(withIdentifier: "title-page-to-genre-page", sender: nil)
             } else {
                 self.presentAlertController(title: "Invalid Playlist Title",
-                                            message: "Playlist title must be between 5 and 15 characters.",
+                                            message: "Playlist title must be between 5 and 20 characters.",
                                             buttonTitle: "OK")
             }
         }
@@ -44,7 +44,7 @@ class TitleViewController: UIViewController {
     
     // Used to make sure playlist title is a valid length
     func validateTitle(_ title: String) -> Bool {
-        if (title.count >= 5 && title.count <= 15) {
+        if (title.count >= 5 && title.count <= 20) {
             return true
         } else {
             return false

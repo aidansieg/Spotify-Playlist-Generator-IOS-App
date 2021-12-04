@@ -16,12 +16,14 @@ class GenreViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        tableView.rowHeight = 65
-        
         // HARD-CODED GENRES FOR TESTING
         self.playlistGenres.append("EDM")
         self.playlistGenres.append("Hip-Hop")
         self.playlistGenres.append("Pop")
+        
+        // Additional behavior
+        tableView.rowHeight = UITableView.automaticDimension
+        tableView.estimatedRowHeight = 65
     }
     
     // Continue button
@@ -29,6 +31,7 @@ class GenreViewController: UITableViewController {
         self.performSegue(withIdentifier: "genre-page-to-year-page", sender: nil)
     }
     
+    // Reload table view content when view updated
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         tableView.reloadData()
