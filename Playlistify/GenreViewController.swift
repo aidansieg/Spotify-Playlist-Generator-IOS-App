@@ -12,6 +12,8 @@ class GenreViewController: UITableViewController {
     var playlistGenres: [String] = []
     var  playlistTitle: String!
     
+    // TESTING STUFF
+    var allowMultipleSelection: Bool = true
     var songs = loadSongs(from: "Songs")
     
     
@@ -38,6 +40,7 @@ class GenreViewController: UITableViewController {
     // Reload table view content when view updated
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        
         tableView.reloadData()
     }
     
@@ -79,45 +82,9 @@ class GenreViewController: UITableViewController {
            
         return cell
     }
-       
-        /*
-       // Define how to move rows graphically
-       override func tableView(_ tableView: UITableView,
-                               moveRowAt sourceIndexPath: IndexPath,
-                               to destinationIndexPath: IndexPath) {
-           itemStore.moveItem(from: sourceIndexPath.row, to: destinationIndexPath.row)
-       }
-       
-       // Define how to delete rows graphically
-       override func tableView(_ tableView: UITableView,
-                               commit editingStyle: UITableViewCell.EditingStyle,
-                               forRowAt indexPath: IndexPath) {
-           // Delete confirmation popup
-           let alertController = UIAlertController(title: nil, message: "Are you sure you want to delete this game?", preferredStyle: .alert)
-           alertController.modalPresentationStyle = .popover
-           
-           // Yes button in delete popup
-           let yesAction = UIAlertAction(title: "Yes", style: .default)
-           {
-               _ in
-               let item = self.itemStore.allItems[indexPath.row]
-               
-               // Remove item from the store...
-               self.itemStore.removeItem(item)
-               
-               // Remove the item's image from the image store
-               self.imageStore.deleteImage(forKey: item.itemKey)
-               
-               // ...and delete the row from the screen
-               tableView.deleteRows(at: [indexPath], with: .automatic)
-           }
-           alertController.addAction(yesAction)
-           
-           // No button in delete popup
-           let noAction = UIAlertAction(title: "No", style: .cancel, handler: nil)
-           alertController.addAction(noAction)
-           
-           // Display pop up when delete clicked
-           present(alertController, animated: true, completion: nil)
-       }*/
+ 
+    // Define actions to take on selected rows
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.cellForRow(at: indexPath)!.backgroundColor = UIColor.systemCyan
+    }
 }
