@@ -85,6 +85,9 @@ class GenreViewController: UITableViewController {
  
     // Define actions to take on selected rows
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        tableView.cellForRow(at: indexPath)!.backgroundColor = UIColor.systemCyan
+        guard let cell = tableView.cellForRow(at: indexPath) else { return }
+        
+        // Highlight selected cell
+        cell.contentView.backgroundColor = UIColor.systemYellow
     }
 }
