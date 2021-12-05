@@ -219,54 +219,6 @@
             </objects>
             <point key="canvasLocation" x="4664" y="-299"/>
         </scene>
-        <!--Old Genre Stuff to Transfer Over-->
-        <scene sceneID="pIi-Sa-2Mh">
-            <objects>
-                <viewController title="Old Genre Stuff to Transfer Over" modalPresentationStyle="fullScreen" id="MbX-ZZ-T39" customClass="GenreViewController" customModule="Playlistify" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="NU6-Lo-vwO" customClass="UITableView">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="GenreCell" translatesAutoresizingMaskIntoConstraints="NO" id="8jt-vP-a1g" customClass="GenreCell" customModule="Playlistify" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="134" width="414" height="44"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="8jt-vP-a1g" id="UHj-V0-9K4">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                    <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Cs4-xg-mXg">
-                                            <rect key="frame" x="186" y="11" width="42" height="21"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                            <nil key="textColor"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
-                                    </subviews>
-                                </tableViewCellContentView>
-                            </tableViewCell>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="N3a-l0-yYd">
-                                <rect key="frame" x="148" y="654.33333333333337" width="118" height="51.666666666666629"/>
-                                <color key="tintColor" systemColor="systemYellowColor"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="filled" title="Continue" cornerStyle="large" buttonSize="large">
-                                    <fontDescription key="titleFontDescription" type="boldSystem" pointSize="18"/>
-                                    <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </buttonConfiguration>
-                            </button>
-                        </subviews>
-                        <viewLayoutGuide key="safeArea" id="vCX-sx-SLe"/>
-                        <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <constraints>
-                            <constraint firstItem="N3a-l0-yYd" firstAttribute="centerX" secondItem="vCX-sx-SLe" secondAttribute="centerX" id="XzG-8i-J3I"/>
-                            <constraint firstItem="vCX-sx-SLe" firstAttribute="bottom" secondItem="N3a-l0-yYd" secondAttribute="bottom" constant="30" id="hhY-tr-V0V"/>
-                        </constraints>
-                    </view>
-                    <navigationItem key="navigationItem" title="Genre" id="OtF-v2-0xe"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="VAy-O3-EOg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="5317" y="396"/>
-        </scene>
         <!--Genre View Controller-->
         <scene sceneID="zO5-Yc-1pj">
             <objects>
@@ -533,7 +485,6 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="zwc-qr-pU3"/>
         <segue reference="Gzk-bJ-ys6"/>
     </inferredMetricsTieBreakers>
     <resources>
