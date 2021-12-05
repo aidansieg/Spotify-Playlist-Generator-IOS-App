@@ -47,6 +47,9 @@ class LoadingViewController: UIViewController {
     // If Spotify API were working, this would be where the playlist-generating algorithm would
     // be called and passed to the final display screen.
     func createPlaylist() {
-        self.performSegue(withIdentifier: "loading-page-to-playlist-page", sender: nil)
+        // Simulate playlist creation
+        DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
+            self.performSegue(withIdentifier: "loading-page-to-playlist-page", sender: nil)
+        }
     }
 }
