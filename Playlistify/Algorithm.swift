@@ -25,7 +25,7 @@ import UIKit
 func algorithm()
 {
     // Array A of arrays B each containing 1 or more criteria elements (and nil values for any empty criteria elements) and 1 importance weight.
-    var constraints: [[String?]]
+    var constraints: [[String?]] = [] // Starting out empty list of constraints.
     // Format: {{"Genre/Subgenre", "Start Year", "End Year", "Importance"}, ...}
     // For example: constraints == {{"EDM", "2012", "2013", "0.60"}, {"Hip-Hop", "2011", "2014", "0.15"}, {"Progressive House", "2012", "2012", nil}, {"Swedish House Mafia", nil, nil, nil}, {"Nothing Was The Same", nil, nil, nil}, {"Under Control", nil, nil, nil}}
     // All permutations of possible user selections:
@@ -92,6 +92,7 @@ func algorithm()
     {
         nilImpCount += 1 // Increase the count of constraints with nil importance.
     }
+    constraints.append(constr)
 
     // System generates the playlist.
     for constraint in constraints
@@ -107,7 +108,7 @@ func algorithm()
                     // Importance is non-nil.
                     for song in 1...plistSize*Int(Double(i) ?? 0.02)
                     {
-                        playlist.append(SpotifyAPI.getSong(genre = g, startYr = s, endYr = e))
+                        // playlist.append(/* song from Spotify that matches genre g, start year s, and end year e */)
                     }
                 }
                 else
@@ -115,7 +116,7 @@ func algorithm()
                     // Importance is nil.
                     for song in 1...plistSize*Int(importanceRemaining / Double(nilImpCount))
                     {
-                        playlist.append(SpotifyAPI.getSong(genre = g, startYr = s, endYr = e))
+                        // playlist.append(/* song from Spotify that matches genre g, start year s, and end year e */)
                     }
                 }
             }
@@ -127,7 +128,7 @@ func algorithm()
                     // Importance is non-nil.
                     for song in 1...plistSize*Int(Double(i) ?? 0.02)
                     {
-                        playlist.append(SpotifyAPI.getSong(genre = g))
+                        // playlist.append(/* song from Spotify that matches genre g */)
                     }
                 }
                 else
@@ -135,7 +136,7 @@ func algorithm()
                     // Importance is nil.
                     for song in 1...plistSize*Int(importanceRemaining / Double(nilImpCount))
                     {
-                        playlist.append(SpotifyAPI.getSong(genre = g))
+                        // playlist.append(/* song from Spotify that matches genre g */)
                     }
                 }
             }
@@ -151,7 +152,7 @@ func algorithm()
                     // Importance is non-nil.
                     for song in 1...plistSize*Int(Double(i) ?? 0.02)
                     {
-                        playlist.append(SpotifyAPI.getSong(startYr = s, endYr = e))
+                        // playlist.append(/* song from Spotify that matches start year s and end year e */)
                     }
                 }
                 else
@@ -159,7 +160,7 @@ func algorithm()
                     // Importance is nil.
                     for song in 1...plistSize*Int(importanceRemaining / Double(nilImpCount))
                     {
-                        playlist.append(SpotifyAPI.getSong(startYr = s, endYr = e))
+                        // playlist.append(/* song from Spotify that matches start year s and end year e */)
                     }
                 }
             }
