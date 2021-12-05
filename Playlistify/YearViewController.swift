@@ -26,7 +26,7 @@ class YearViewController: UIViewController {
                 self.performSegue(withIdentifier: "year-page-to-loading-page", sender: nil)
             } else {
                 self.presentAlertController(title: "Invalid Playlist Year Range",
-                                            message: "Playlist year range should be between 1920-2021 and be valid years.",
+                                            message: "Playlist year range should be between 1975-2021 and be valid years.",
                                             buttonTitle: "OK")
             }
         }
@@ -56,7 +56,7 @@ class YearViewController: UIViewController {
             return false
         } else if (Int(endYear)! < Int(startYear)!) {
             return false
-        } else if (Int(startYear)! < 1920 || Int(startYear)! > 2021) || Int(endYear)! < 1920 || Int(endYear)! > 2021 {
+        } else if (Int(startYear)! < 1975 || Int(startYear)! > 2021) || Int(endYear)! < 1975 || Int(endYear)! > 2021 {
             return false
         } else {
             return true

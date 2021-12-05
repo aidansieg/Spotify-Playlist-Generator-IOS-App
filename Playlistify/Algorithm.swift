@@ -1,3 +1,24 @@
+
+
+//func createPlaylist(genres[], playlistStartYear, playlistEndYear) -> [] {
+//    var playlist = []
+//
+//    var songs = loadSongs(from: "Songs")
+//
+//     for song in songs {
+//         if((song.year >= Int(playlistStartYear)) && (song.year <= Int(playlistEndYear))) {
+//             // another if statement for genres
+//             playlist.append(song)
+//         }
+//     }
+//
+//    return playlist
+// }
+//
+
+
+
+
 /** COMMENT THIS OUT UNTIL IT IS DONE SO IT DOESN'T BREAK THE BUILD
 import UIKit
 

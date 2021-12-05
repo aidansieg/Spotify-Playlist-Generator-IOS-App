@@ -12,15 +12,19 @@ class GenreViewController: UITableViewController {
     var playlistGenres: [String] = []
     var  playlistTitle: String!
     
+    var songs = loadSongs(from: "Songs")
+    
+    
     // View actions
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        // HARD-CODED GENRES FOR TESTING
-        self.playlistGenres.append("EDM")
-        self.playlistGenres.append("Hip-Hop")
-        self.playlistGenres.append("Pop")
-        
+        // display genres
+        for song in songs {
+            if(!self.playlistGenres.contains(song.genre)) {
+                self.playlistGenres.append(song.genre)
+            }
+        }
         // Additional behavior
         tableView.rowHeight = UITableView.automaticDimension
         tableView.estimatedRowHeight = 65

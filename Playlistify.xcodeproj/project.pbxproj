@@ -14,6 +14,8 @@
 		71170473273AFD1F0070BCE9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 71170472273AFD1F0070BCE9 /* Assets.xcassets */; };
 		71170476273AFD1F0070BCE9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 71170474273AFD1F0070BCE9 /* LaunchScreen.storyboard */; };
 		7117047E273AFFB90070BCE9 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7117047D273AFFB90070BCE9 /* MenuViewController.swift */; };
+		71228DAB275D418100BCF275 /* SongData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71228DAA275D418000BCF275 /* SongData.swift */; };
+		71228DAD275D45E800BCF275 /* Songs.csv in Resources */ = {isa = PBXBuildFile; fileRef = 71228DAC275D45E800BCF275 /* Songs.csv */; };
 		D15C348C274DC07E00EB81C6 /* SimulatorDisplayMode.swift in Sources */ = {isa = PBXBuildFile; fileRef = D15C348B274DC07E00EB81C6 /* SimulatorDisplayMode.swift */; };
 		D173D5E127515E6700FF5B44 /* TitleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D173D5E027515E6700FF5B44 /* TitleViewController.swift */; };
 		D173D5E32751601400FF5B44 /* GenreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D173D5E22751601400FF5B44 /* GenreViewController.swift */; };
@@ -35,6 +37,8 @@
 		71170475273AFD1F0070BCE9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		71170477273AFD1F0070BCE9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7117047D273AFFB90070BCE9 /* MenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
+		71228DAA275D418000BCF275 /* SongData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SongData.swift; sourceTree = "<group>"; };
+		71228DAC275D45E800BCF275 /* Songs.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Songs.csv; sourceTree = "<group>"; };
 		D15C348B274DC07E00EB81C6 /* SimulatorDisplayMode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimulatorDisplayMode.swift; sourceTree = "<group>"; };
 		D173D5E027515E6700FF5B44 /* TitleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleViewController.swift; sourceTree = "<group>"; };
 		D173D5E22751601400FF5B44 /* GenreViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenreViewController.swift; sourceTree = "<group>"; };
@@ -94,6 +98,8 @@
 				D173D5E6275163F200FF5B44 /* PlaylistViewController.swift */,
 				D15C348B274DC07E00EB81C6 /* SimulatorDisplayMode.swift */,
 				D1C6F815275BFB6700E3D1CF /* GenreCell.swift */,
+				71228DAA275D418000BCF275 /* SongData.swift */,
+				71228DAC275D45E800BCF275 /* Songs.csv */,
 				7117046F273AFD1B0070BCE9 /* Main.storyboard */,
 				71170472273AFD1F0070BCE9 /* Assets.xcassets */,
 				71170474273AFD1F0070BCE9 /* LaunchScreen.storyboard */,
@@ -175,6 +181,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				71170476273AFD1F0070BCE9 /* LaunchScreen.storyboard in Resources */,
+				71228DAD275D45E800BCF275 /* Songs.csv in Resources */,
 				71170473273AFD1F0070BCE9 /* Assets.xcassets in Resources */,
 				71170471273AFD1B0070BCE9 /* Main.storyboard in Resources */,
 			);
@@ -187,6 +194,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				71228DAB275D418100BCF275 /* SongData.swift in Sources */,
 				7117047E273AFFB90070BCE9 /* MenuViewController.swift in Sources */,
 				7117046E273AFD1B0070BCE9 /* LoginViewController.swift in Sources */,
 				D173D5E5275161F900FF5B44 /* YearViewController.swift in Sources */,
