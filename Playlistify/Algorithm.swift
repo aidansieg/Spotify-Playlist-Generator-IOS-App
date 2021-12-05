@@ -1,27 +1,21 @@
+import UIKit
 
+func generatePlaylist(_ startYear: String, _ endYear: String, _ genres: [String]) -> [String] {
+    var createdPlaylist: [String] = []
+    let songs = loadSongs(from: "Songs")
 
-//func createPlaylist(genres[], playlistStartYear, playlistEndYear) -> [] {
-//    var playlist = []
-//
-//    var songs = loadSongs(from: "Songs")
-//
-//     for song in songs {
-//         if((song.year >= Int(playlistStartYear)) && (song.year <= Int(playlistEndYear))) {
-//             // another if statement for genres
-//             playlist.append(song)
-//         }
-//     }
-//
-//    return playlist
-// }
-//
+     for song in songs {
+         if((Int(song.year)! >= Int(startYear)!) && (Int(song.year)! <= Int(endYear)!) && genres.contains(song.genre)) {
+             // another if statement for genres
+             createdPlaylist.append(song.title)
+         }
+     }
 
-
+    return createdPlaylist
+ }
 
 
 /*
-import UIKit
-
 func algorithm()
 {
     // Array A of arrays B each containing 1 or more criteria elements (and nil values for any empty criteria elements) and 1 importance weight.

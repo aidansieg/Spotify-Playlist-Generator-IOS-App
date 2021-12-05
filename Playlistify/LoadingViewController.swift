@@ -15,6 +15,9 @@ class LoadingViewController: UIViewController {
     var   playlistEndYear: String!
     var    selectedGenres: [String]!
     
+    // Playlist to be created
+    var createdPlaylist: [String] = []
+    
     // View actions
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -30,6 +33,7 @@ class LoadingViewController: UIViewController {
         switch segue.identifier {
         case "loading-page-to-playlist-page":
             let playlistViewController = segue.destination as! PlaylistViewController
+            playlistViewController.createdPlaylist   = createdPlaylist
             playlistViewController.playlistGenres    = playlistGenres
             playlistViewController.playlistTitle     = playlistTitle
             playlistViewController.playlistStartYear = playlistStartYear
@@ -49,6 +53,7 @@ class LoadingViewController: UIViewController {
     func createPlaylist() {
         // Simulate playlist creation
         DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
+            self.createdPlaylist = generatePlaylist(self.playlistStartYear, self.playlistEndYear, self.selectedGenres)
             self.performSegue(withIdentifier: "loading-page-to-playlist-page", sender: nil)
         }
     }

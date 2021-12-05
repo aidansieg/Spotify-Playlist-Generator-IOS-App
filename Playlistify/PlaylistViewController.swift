@@ -11,6 +11,7 @@ class PlaylistViewController: UIViewController {
     @IBOutlet var playlistYearsLabel: UILabel!
     
     // Data passed from previous view controllers
+    var   createdPlaylist: [String]!
     var    playlistGenres: [String]!
     var     playlistTitle: String!
     var playlistStartYear: String!
@@ -22,7 +23,7 @@ class PlaylistViewController: UIViewController {
         super.viewDidLoad()
         
         // Labels
-        playlistTitleLabel.text = playlistTitle
+        playlistTitleLabel.text = "\(createdPlaylist!)"
         playlistGenreLabel.text = "\(selectedGenres!)"
         playlistYearsLabel.text = "\(playlistStartYear!)-\(playlistEndYear!)"
     }
