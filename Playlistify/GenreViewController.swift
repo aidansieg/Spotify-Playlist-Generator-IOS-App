@@ -90,7 +90,7 @@ class GenreViewController: UITableViewController {
         guard let cell = tableView.cellForRow(at: indexPath) else { return }
         
         // Highlight selected cell
-        cell.contentView.backgroundColor = UIColor.systemYellow
+        cell.contentView.backgroundColor = UIColor.darkGray
         self.selectedGenres.append(self.playlistGenres[indexPath.row])
     }
 }
