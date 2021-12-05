@@ -23,7 +23,7 @@ class YearViewController: UIViewController {
         if let startYear = playlistStartYear.text, let endYear = playlistEndYear.text {
             // Title length check
             if self.validateYears(startYear, endYear) {
-                self.performSegue(withIdentifier: "year-page-to-playlist-page", sender: nil)
+                self.performSegue(withIdentifier: "year-page-to-loading-page", sender: nil)
             } else {
                 self.presentAlertController(title: "Invalid Playlist Year Range",
                                             message: "Playlist year range should be between 1920-2021 and be valid years.",
@@ -35,12 +35,12 @@ class YearViewController: UIViewController {
     // Segues from the create a playlist year page
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         switch segue.identifier {
-        case "year-page-to-playlist-page":
-            let playlistViewController = segue.destination as! PlaylistViewController
-            playlistViewController.playlistGenres    = playlistGenres
-            playlistViewController.playlistTitle     = playlistTitle
-            playlistViewController.playlistStartYear = playlistStartYear.text
-            playlistViewController.playlistEndYear   = playlistEndYear.text
+        case "year-page-to-loading-page":
+            let loadingViewController = segue.destination as! LoadingViewController
+            loadingViewController.playlistGenres    = playlistGenres
+            loadingViewController.playlistTitle     = playlistTitle
+            loadingViewController.playlistStartYear = playlistStartYear.text
+            loadingViewController.playlistEndYear   = playlistEndYear.text
             break
         default:
             preconditionFailure("Unexpected segue identifier")

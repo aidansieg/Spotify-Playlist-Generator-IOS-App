@@ -410,12 +410,30 @@
                     <connections>
                         <outlet property="playlistEndYear" destination="wKh-5W-qVI" id="5jY-Y2-9WT"/>
                         <outlet property="playlistStartYear" destination="Gm2-fQ-8gn" id="jsk-iE-PuN"/>
-                        <segue destination="rry-Dh-cWW" kind="presentation" identifier="year-page-to-playlist-page" id="etl-vK-cp6"/>
+                        <segue destination="dsv-kF-Okz" kind="presentation" identifier="year-page-to-loading-page" id="mZs-Gr-Fxb"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tc4-H6-W9p" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="6547.826086956522" y="-307.33695652173918"/>
+        </scene>
+        <!--Loading View Controller-->
+        <scene sceneID="uQo-SN-Odq">
+            <objects>
+                <viewController modalPresentationStyle="fullScreen" id="dsv-kF-Okz" customClass="LoadingViewController" customModule="Playlistify" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Lhu-vZ-z7t">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="ybr-rh-39r"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <connections>
+                        <segue destination="rry-Dh-cWW" kind="presentation" identifier="loading-page-to-playlist-page" id="CDE-yE-5ey"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5cJ-rh-XnM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="7512" y="-299"/>
         </scene>
         <!--Playlist View Controller-->
         <scene sceneID="noZ-6B-gOu">
@@ -495,11 +513,11 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VmS-tZ-FrE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="7515.9420289855079" y="-307.33695652173918"/>
+            <point key="canvasLocation" x="8548" y="-298"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="etl-vK-cp6"/>
+        <segue reference="CDE-yE-5ey"/>
         <segue reference="Gzk-bJ-ys6"/>
     </inferredMetricsTieBreakers>
     <resources>
