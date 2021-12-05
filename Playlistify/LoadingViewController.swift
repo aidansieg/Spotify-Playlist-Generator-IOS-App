@@ -13,6 +13,7 @@ class LoadingViewController: UIViewController {
     var     playlistTitle: String!
     var playlistStartYear: String!
     var   playlistEndYear: String!
+    var    selectedGenres: [String]!
     
     // View actions
     override func viewDidLoad() {
@@ -33,6 +34,7 @@ class LoadingViewController: UIViewController {
             playlistViewController.playlistTitle     = playlistTitle
             playlistViewController.playlistStartYear = playlistStartYear
             playlistViewController.playlistEndYear   = playlistEndYear
+            playlistViewController.selectedGenres    = selectedGenres
             break
         default:
             preconditionFailure("Unexpected segue identifier")

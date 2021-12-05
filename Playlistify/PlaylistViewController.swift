@@ -15,6 +15,7 @@ class PlaylistViewController: UIViewController {
     var     playlistTitle: String!
     var playlistStartYear: String!
     var   playlistEndYear: String!
+    var    selectedGenres: [String]!
     
     // View actions
     override func viewDidLoad() {
@@ -22,7 +23,7 @@ class PlaylistViewController: UIViewController {
         
         // Labels
         playlistTitleLabel.text = playlistTitle
-        playlistGenreLabel.text = "\(playlistGenres!)"
+        playlistGenreLabel.text = "\(selectedGenres!)"
         playlistYearsLabel.text = "\(playlistStartYear!)-\(playlistEndYear!)"
     }
     

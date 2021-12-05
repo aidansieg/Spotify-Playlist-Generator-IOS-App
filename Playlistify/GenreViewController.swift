@@ -15,6 +15,7 @@ class GenreViewController: UITableViewController {
     // TESTING STUFF
     var allowMultipleSelection: Bool = true
     var songs = loadSongs(from: "Songs")
+    var selectedGenres: [String] = []
     
     
     // View actions
@@ -51,6 +52,7 @@ class GenreViewController: UITableViewController {
             let yearViewController = segue.destination as! YearViewController
             yearViewController.playlistGenres = playlistGenres
             yearViewController.playlistTitle  = playlistTitle
+            yearViewController.selectedGenres = selectedGenres
             break
         default:
             preconditionFailure("Unexpected segue identifier")
@@ -89,5 +91,6 @@ class GenreViewController: UITableViewController {
         
         // Highlight selected cell
         cell.contentView.backgroundColor = UIColor.systemYellow
+        self.selectedGenres.append(self.playlistGenres[indexPath.row])
     }
 }
