@@ -369,7 +369,7 @@
                                     <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </buttonConfiguration>
                                 <connections>
-                                    <segue destination="rry-Dh-cWW" kind="presentation" identifier="year-page-to-playlist-page" modalTransitionStyle="crossDissolve" id="9vr-y4-C0b"/>
+                                    <action selector="createPlaylist:" destination="S54-Ko-heP" eventType="touchUpInside" id="TpG-9F-ozN"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enter a end year:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xJe-DO-lqi">
@@ -410,6 +410,7 @@
                     <connections>
                         <outlet property="playlistEndYear" destination="wKh-5W-qVI" id="5jY-Y2-9WT"/>
                         <outlet property="playlistStartYear" destination="Gm2-fQ-8gn" id="jsk-iE-PuN"/>
+                        <segue destination="rry-Dh-cWW" kind="presentation" identifier="year-page-to-playlist-page" id="etl-vK-cp6"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tc4-H6-W9p" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -498,7 +499,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="zwc-qr-pU3"/>
+        <segue reference="etl-vK-cp6"/>
         <segue reference="Gzk-bJ-ys6"/>
     </inferredMetricsTieBreakers>
     <resources>
