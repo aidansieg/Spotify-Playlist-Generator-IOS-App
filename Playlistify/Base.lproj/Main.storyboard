@@ -40,7 +40,7 @@
                                 <rect key="frame" x="102" y="327" width="210" height="83"/>
                                 <color key="tintColor" systemColor="systemYellowColor"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="filled" title="Login" cornerStyle="capsule" buttonSize="large">
+                                <buttonConfiguration key="configuration" style="filled" title="Login" cornerStyle="large" buttonSize="large">
                                     <fontDescription key="titleFontDescription" type="system" weight="semibold" pointSize="32"/>
                                     <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <color key="baseBackgroundColor" systemColor="systemYellowColor"/>
@@ -84,7 +84,8 @@
                                 <rect key="frame" x="116" y="189" width="183" height="57"/>
                                 <color key="tintColor" systemColor="systemYellowColor"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="filled" title="Create New Playlist" cornerStyle="capsule" buttonSize="large">
+                                <buttonConfiguration key="configuration" style="filled" title="Create New Playlist" cornerStyle="large" buttonSize="large">
+                                    <fontDescription key="titleFontDescription" type="boldSystem" pointSize="15"/>
                                     <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <color key="baseBackgroundColor" systemColor="systemYellowColor"/>
                                 </buttonConfiguration>
@@ -111,7 +112,8 @@
                                 <rect key="frame" x="116" y="421" width="183" height="56"/>
                                 <color key="tintColor" systemColor="systemYellowColor"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="filled" title="Logout" cornerStyle="capsule" buttonSize="large">
+                                <buttonConfiguration key="configuration" style="filled" title="Logout" cornerStyle="large" buttonSize="large">
+                                    <fontDescription key="titleFontDescription" type="boldSystem" pointSize="19"/>
                                     <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <color key="baseBackgroundColor" systemColor="systemYellowColor"/>
                                 </buttonConfiguration>
@@ -215,7 +217,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dTk-ox-a8l" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4657.971014492754" y="-307.33695652173918"/>
+            <point key="canvasLocation" x="4664" y="-299"/>
         </scene>
         <!--Old Genre Stuff to Transfer Over-->
         <scene sceneID="pIi-Sa-2Mh">
@@ -268,11 +270,12 @@
         <!--Genre View Controller-->
         <scene sceneID="zO5-Yc-1pj">
             <objects>
-                <tableViewController modalPresentationStyle="fullScreen" id="UPh-OS-z7F" customClass="GenreViewController" customModule="Playlistify" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController modalTransitionStyle="crossDissolve" modalPresentationStyle="fullScreen" id="UPh-OS-z7F" customClass="GenreViewController" customModule="Playlistify" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="gqr-Cq-Khh">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="sectionIndexBackgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <label key="tableHeaderView" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Select up to 3 genres" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="3no-nB-D39">
                             <rect key="frame" x="0.0" y="0.0" width="414" height="83"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -282,10 +285,14 @@
                             <nil key="highlightedColor"/>
                         </label>
                         <button key="tableFooterView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="p8k-KA-zgP">
-                            <rect key="frame" x="0.0" y="194.00000000000003" width="414" height="44"/>
+                            <rect key="frame" x="0.0" y="194.00000000000003" width="414" height="47"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <state key="normal" title="Button"/>
-                            <buttonConfiguration key="configuration" style="plain" title="Continue"/>
+                            <buttonConfiguration key="configuration" style="filled" title="Continue" buttonSize="large">
+                                <fontDescription key="titleFontDescription" type="boldSystem" pointSize="18"/>
+                                <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="baseBackgroundColor" systemColor="systemYellowColor"/>
+                            </buttonConfiguration>
                             <connections>
                                 <action selector="continueToNextPage:" destination="UPh-OS-z7F" eventType="touchUpInside" id="lfH-nv-qMJ"/>
                             </connections>
@@ -298,14 +305,19 @@
                                     <rect key="frame" x="0.0" y="0.0" width="414" height="43.666667938232422"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rkB-Fj-a55">
-                                            <rect key="frame" x="186" y="11" width="42" height="21"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rkB-Fj-a55">
+                                            <rect key="frame" x="169.21731929350062" y="11" width="72.000000000000455" height="21"/>
+                                            <color key="backgroundColor" red="0.88235294119999996" green="0.34509803919999998" blue="0.16078431369999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
+                                    <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <constraints>
+                                        <constraint firstItem="rkB-Fj-a55" firstAttribute="centerX" secondItem="1Oh-bG-RUX" secondAttribute="centerX" id="2xK-Iz-LC7"/>
+                                        <constraint firstItem="rkB-Fj-a55" firstAttribute="centerY" secondItem="1Oh-bG-RUX" secondAttribute="centerY" id="vQ1-UA-DDt"/>
+                                    </constraints>
                                 </tableViewCellContentView>
                                 <connections>
                                     <outlet property="genreLabel" destination="rkB-Fj-a55" id="L42-iz-8O9"/>
@@ -323,12 +335,12 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Z0H-8v-3H0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5601" y="-298"/>
+            <point key="canvasLocation" x="5598.5507246376819" y="-298.36956521739131"/>
         </scene>
         <!--Year View Controller-->
         <scene sceneID="hBE-Ff-zfk">
             <objects>
-                <viewController title="Year View Controller" modalPresentationStyle="fullScreen" id="S54-Ko-heP" customClass="YearViewController" customModule="Playlistify" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Year View Controller" modalTransitionStyle="crossDissolve" modalPresentationStyle="fullScreen" id="S54-Ko-heP" customClass="YearViewController" customModule="Playlistify" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="sfC-vL-eEW">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -367,6 +379,7 @@
                                 <buttonConfiguration key="configuration" style="filled" title="Create Playlist" cornerStyle="large" buttonSize="large">
                                     <fontDescription key="titleFontDescription" type="boldSystem" pointSize="18"/>
                                     <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <color key="baseBackgroundColor" systemColor="systemYellowColor"/>
                                 </buttonConfiguration>
                                 <connections>
                                     <action selector="createPlaylist:" destination="S54-Ko-heP" eventType="touchUpInside" id="TpG-9F-ozN"/>
@@ -415,17 +428,17 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tc4-H6-W9p" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="6547.826086956522" y="-307.33695652173918"/>
+            <point key="canvasLocation" x="6554" y="-299"/>
         </scene>
         <!--Loading View Controller-->
         <scene sceneID="uQo-SN-Odq">
             <objects>
-                <viewController modalPresentationStyle="fullScreen" id="dsv-kF-Okz" customClass="LoadingViewController" customModule="Playlistify" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController modalTransitionStyle="crossDissolve" modalPresentationStyle="fullScreen" id="dsv-kF-Okz" customClass="LoadingViewController" customModule="Playlistify" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Lhu-vZ-z7t">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <viewLayoutGuide key="safeArea" id="ybr-rh-39r"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </view>
                     <connections>
                         <segue destination="rry-Dh-cWW" kind="presentation" identifier="loading-page-to-playlist-page" id="CDE-yE-5ey"/>
@@ -438,18 +451,18 @@
         <!--Playlist View Controller-->
         <scene sceneID="noZ-6B-gOu">
             <objects>
-                <viewController title="Playlist View Controller" modalPresentationStyle="fullScreen" id="rry-Dh-cWW" customClass="PlaylistViewController" customModule="Playlistify" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Playlist View Controller" modalTransitionStyle="crossDissolve" modalPresentationStyle="fullScreen" id="rry-Dh-cWW" customClass="PlaylistViewController" customModule="Playlistify" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8Oc-AD-5ha">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" fixedFrame="YES" image="circles.hexagongrid" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="J6a-2e-MB6">
-                                <rect key="frame" x="-120" y="533" width="348" height="295"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" fixedFrame="YES" image="circles.hexagongrid" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="8hr-hg-ds4">
+                                <rect key="frame" x="248" y="220.00000000000011" width="348" height="295"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="tintColor" systemColor="systemGreenColor"/>
                             </imageView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" fixedFrame="YES" image="circles.hexagongrid" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="8hr-hg-ds4">
-                                <rect key="frame" x="248" y="220.00000000000011" width="348" height="295"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" fixedFrame="YES" image="circles.hexagongrid" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="J6a-2e-MB6">
+                                <rect key="frame" x="-120" y="533" width="348" height="295"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="tintColor" systemColor="systemGreenColor"/>
                             </imageView>
@@ -460,6 +473,7 @@
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="*PLAYLIST NAME*" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xIl-Un-frl">
                                 <rect key="frame" x="136.33333333333331" y="100" width="141.33333333333331" height="20.333333333333329"/>
+                                <color key="backgroundColor" red="0.301921088" green="0.57049392379999997" blue="0.66666668650000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -471,6 +485,7 @@
                                 <buttonConfiguration key="configuration" style="filled" title="Main Menu" cornerStyle="large" buttonSize="large">
                                     <fontDescription key="titleFontDescription" type="boldSystem" pointSize="18"/>
                                     <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <color key="baseBackgroundColor" systemColor="systemYellowColor"/>
                                 </buttonConfiguration>
                                 <connections>
                                     <segue destination="iez-4D-05f" kind="presentation" identifier="playlist-page-to-main-menu" id="Gzk-bJ-ys6"/>
@@ -478,12 +493,14 @@
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Genres" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ge9-Ib-6Ne">
                                 <rect key="frame" x="179.66666666666666" y="170.33333333333334" width="55" height="21"/>
+                                <color key="backgroundColor" red="0.301921088" green="0.57049392379999997" blue="0.66666668650000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Years" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KaV-lf-AG1">
                                 <rect key="frame" x="136" y="241" width="92" height="21"/>
+                                <color key="backgroundColor" red="0.301921088" green="0.57049392379999997" blue="0.66666668650000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -513,19 +530,15 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VmS-tZ-FrE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="8548" y="-298"/>
+            <point key="canvasLocation" x="8547.826086956522" y="-298.36956521739131"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="CDE-yE-5ey"/>
         <segue reference="Gzk-bJ-ys6"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="circles.hexagongrid" catalog="system" width="128" height="112"/>
         <image name="rectangle.fill" catalog="system" width="128" height="93"/>
-        <systemColor name="systemBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
         <systemColor name="systemGreenColor">
             <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>

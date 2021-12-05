@@ -44,7 +44,7 @@ class TitleViewController: UIViewController {
     
     // Used to make sure playlist title is a valid length
     func validateTitle(_ title: String) -> Bool {
-        if (title.count >= 5 && title.count <= 20) {
+        if (title.count >= 2 && title.count <= 20) {
             return true
         } else {
             return false
