@@ -438,18 +438,25 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                        <button key="tableFooterView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="g6s-kf-PMp">
-                            <rect key="frame" x="0.0" y="111" width="414" height="44"/>
+                        <label key="tableHeaderView" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Playlist Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Xf6-ED-waY">
+                            <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <button key="tableFooterView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="H9a-xx-WC2">
+                            <rect key="frame" x="0.0" y="155.00000000000003" width="414" height="44"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <state key="normal" title="Button"/>
                             <buttonConfiguration key="configuration" style="plain" title="Main Menu"/>
                             <connections>
-                                <segue destination="iez-4D-05f" kind="presentation" identifier="playlist-page-to-main-menu" id="Ey7-km-Qos"/>
+                                <segue destination="iez-4D-05f" kind="presentation" identifier="playlist-page-to-main-menu" id="SLE-OW-qHx"/>
                             </connections>
                         </button>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="PlaylistCell" id="CDo-qS-85Q" customClass="PlaylistCell" customModule="Playlistify" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="44.666666030883789" width="414" height="43.666667938232422"/>
+                                <rect key="frame" x="0.0" y="88.666666030883789" width="414" height="43.666667938232422"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="CDo-qS-85Q" id="NX4-gZ-KXe">
                                     <rect key="frame" x="0.0" y="0.0" width="414" height="43.666667938232422"/>
@@ -482,6 +489,9 @@
                             <outlet property="delegate" destination="JjC-b6-bEk" id="Pxr-EJ-MmC"/>
                         </connections>
                     </tableView>
+                    <connections>
+                        <outlet property="playlistTitleLabel" destination="Xf6-ED-waY" id="0qX-2m-UeR"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="e1P-j8-3z5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -570,8 +580,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="O36-Qe-Rab"/>
-        <segue reference="Ey7-km-Qos"/>
+        <segue reference="SLE-OW-qHx"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="circles.hexagongrid" catalog="system" width="128" height="112"/>

@@ -16,7 +16,7 @@ class LoadingViewController: UIViewController {
     var    selectedGenres: [String]!
     
     // Playlist to be created
-    var createdPlaylist: [String] = []
+    var createdPlaylist: [[String:String]] = []
     
     // View actions
     override func viewDidLoad() {

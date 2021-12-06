@@ -6,12 +6,13 @@ import UIKit
 
 class PlaylistViewController: UITableViewController {
     // Outlets
-    @IBOutlet var playlistGenreLabel: UILabel!
     @IBOutlet var playlistTitleLabel: UILabel!
-    @IBOutlet var playlistYearsLabel: UILabel!
+    //@IBOutlet var playlistGenreLabel: UILabel!
+    //@IBOutlet var playlistTitleLabel: UILabel!
+    //@IBOutlet var playlistYearsLabel: UILabel!
     
     // Data passed from previous view controllers
-    var   createdPlaylist: [String]!
+    var   createdPlaylist: [[String:String]]!
     var    playlistGenres: [String]!
     var     playlistTitle: String!
     var playlistStartYear: String!
@@ -23,7 +24,7 @@ class PlaylistViewController: UITableViewController {
         super.viewDidLoad()
         
         // Labels
-        //playlistTitleLabel.text = "\(createdPlaylist!)"
+        playlistTitleLabel.text = self.playlistTitle
         //playlistGenreLabel.text = "\(selectedGenres!)"
         //playlistYearsLabel.text = "\(playlistStartYear!)-\(playlistEndYear!)"
     }
@@ -60,7 +61,8 @@ class PlaylistViewController: UITableViewController {
         let song = self.createdPlaylist[indexPath.row]
            
         // Cell components to display
-        cell.songNameLabel.text = song
+        cell.songNameLabel.text   = song["name"]
+        cell.songArtistLabel.text = song["artist"]
            
         return cell
     }

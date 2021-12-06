@@ -1,13 +1,13 @@
 import UIKit
 
-func generatePlaylist(_ startYear: String, _ endYear: String, _ genres: [String]) -> [String] {
-    var createdPlaylist: [String] = []
+func generatePlaylist(_ startYear: String, _ endYear: String, _ genres: [String]) -> [[String:String]] {
+    var createdPlaylist: [[String:String]] = []
     let songs = loadSongs(from: "Songs")
 
      for song in songs {
          if((Int(song.year)! >= Int(startYear)!) && (Int(song.year)! <= Int(endYear)!) && genres.contains(song.genre)) {
              // another if statement for genres
-             createdPlaylist.append(song.title)
+             createdPlaylist.append(["name": song.title, "artist": song.artist])
          }
      }
 
