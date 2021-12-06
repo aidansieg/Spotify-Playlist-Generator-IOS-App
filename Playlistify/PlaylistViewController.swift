@@ -39,4 +39,29 @@ class PlaylistViewController: UITableViewController {
             break
         }
     }
+    
+    //***************************************** Table View Configuration *****************************************//
+
+    // Define how many rows to display graphically
+    override func tableView(_ tableView: UITableView,
+                            numberOfRowsInSection section: Int) -> Int {
+        return self.createdPlaylist.count
+    }
+       
+    // Define how to display rows graphically
+    override func tableView(_ tableView: UITableView,
+                            cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        // Get a new cell or use an old one that is not in use anymore
+        let cell = tableView.dequeueReusableCell(withIdentifier: "PlaylistCell",
+                                                for: indexPath) as! PlaylistCell
+           
+        // Set text in the cell to correspond with data at the nth index of items, where
+        // n = row the cell will appear in on the table view
+        let song = self.createdPlaylist[indexPath.row]
+           
+        // Cell components to display
+        cell.songNameLabel.text = song
+           
+        return cell
+    }
 }
