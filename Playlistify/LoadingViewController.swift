@@ -25,7 +25,6 @@ class LoadingViewController: UIViewController {
         DispatchQueue.main.async {
             self.createPlaylist()
         }
-        
     }
     
     // Segues from the create a playlist title page

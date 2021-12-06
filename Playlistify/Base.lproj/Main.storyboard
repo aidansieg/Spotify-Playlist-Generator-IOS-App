@@ -423,7 +423,7 @@
                         </constraints>
                     </view>
                     <connections>
-                        <segue destination="rry-Dh-cWW" kind="presentation" identifier="loading-page-to-playlist-page" id="CDE-yE-5ey"/>
+                        <segue destination="JjC-b6-bEk" kind="presentation" identifier="loading-page-to-playlist-page" id="O36-Qe-Rab"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5cJ-rh-XnM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -431,9 +431,66 @@
             <point key="canvasLocation" x="7511.594202898551" y="-299.18478260869568"/>
         </scene>
         <!--Playlist View Controller-->
+        <scene sceneID="731-Vm-ZTH">
+            <objects>
+                <tableViewController modalPresentationStyle="fullScreen" id="JjC-b6-bEk" customClass="PlaylistViewController" customModule="Playlistify" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="cAg-B7-BGp">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <button key="tableFooterView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="g6s-kf-PMp">
+                            <rect key="frame" x="0.0" y="111" width="414" height="44"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <state key="normal" title="Button"/>
+                            <buttonConfiguration key="configuration" style="plain" title="Main Menu"/>
+                            <connections>
+                                <segue destination="iez-4D-05f" kind="presentation" identifier="playlist-page-to-main-menu" id="Ey7-km-Qos"/>
+                            </connections>
+                        </button>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="CDo-qS-85Q" customClass="PlaylistCell" customModule="Playlistify" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="44.666666030883789" width="414" height="43.666667938232422"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="CDo-qS-85Q" id="NX4-gZ-KXe">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.666667938232422"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Song Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ocP-jW-plf">
+                                            <rect key="frame" x="39" y="11" width="89" height="21"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Song Artist" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Uwf-oe-uMH">
+                                            <rect key="frame" x="309" y="11" width="85" height="21"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="songArtistLabel" destination="Uwf-oe-uMH" id="km6-Fq-NiL"/>
+                                    <outlet property="songNameLabel" destination="ocP-jW-plf" id="Hzs-IN-R5x"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="JjC-b6-bEk" id="tw8-yz-Mck"/>
+                            <outlet property="delegate" destination="JjC-b6-bEk" id="Pxr-EJ-MmC"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="e1P-j8-3z5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="8432" y="-299"/>
+        </scene>
+        <!--Old Playlist View Controller For Reference-->
         <scene sceneID="noZ-6B-gOu">
             <objects>
-                <viewController title="Playlist View Controller" modalTransitionStyle="crossDissolve" modalPresentationStyle="fullScreen" id="rry-Dh-cWW" customClass="PlaylistViewController" customModule="Playlistify" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Old Playlist View Controller For Reference" modalTransitionStyle="crossDissolve" modalPresentationStyle="fullScreen" id="rry-Dh-cWW" customClass="PlaylistViewController" customModule="Playlistify" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8Oc-AD-5ha">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -469,9 +526,6 @@
                                     <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <color key="baseBackgroundColor" systemColor="systemYellowColor"/>
                                 </buttonConfiguration>
-                                <connections>
-                                    <segue destination="iez-4D-05f" kind="presentation" identifier="playlist-page-to-main-menu" id="Gzk-bJ-ys6"/>
-                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Genres" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ge9-Ib-6Ne">
                                 <rect key="frame" x="179.66666666666666" y="170.33333333333334" width="55" height="21"/>
@@ -512,17 +566,19 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VmS-tZ-FrE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="8547.826086956522" y="-298.36956521739131"/>
+            <point key="canvasLocation" x="9742" y="-298"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="CDE-yE-5ey"/>
-        <segue reference="Gzk-bJ-ys6"/>
+        <segue reference="Ey7-km-Qos"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="circles.hexagongrid" catalog="system" width="128" height="112"/>
         <image name="rectangle.fill" catalog="system" width="128" height="93"/>
         <image name="wave.3.right" catalog="system" width="83" height="128"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
         <systemColor name="systemGreenColor">
             <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>

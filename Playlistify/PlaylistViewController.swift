@@ -4,7 +4,7 @@
  */
 import UIKit
 
-class PlaylistViewController: UIViewController {
+class PlaylistViewController: UITableViewController {
     // Outlets
     @IBOutlet var playlistGenreLabel: UILabel!
     @IBOutlet var playlistTitleLabel: UILabel!
@@ -23,9 +23,9 @@ class PlaylistViewController: UIViewController {
         super.viewDidLoad()
         
         // Labels
-        playlistTitleLabel.text = "\(createdPlaylist!)"
-        playlistGenreLabel.text = "\(selectedGenres!)"
-        playlistYearsLabel.text = "\(playlistStartYear!)-\(playlistEndYear!)"
+        //playlistTitleLabel.text = "\(createdPlaylist!)"
+        //playlistGenreLabel.text = "\(selectedGenres!)"
+        //playlistYearsLabel.text = "\(playlistStartYear!)-\(playlistEndYear!)"
     }
     
     // Segues from the create a playlist playlist page
