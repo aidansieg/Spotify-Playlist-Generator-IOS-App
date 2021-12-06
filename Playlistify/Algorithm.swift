@@ -1,5 +1,6 @@
 import UIKit
 
+// Testing algorithm to generate a basic playlist to demonstrate app functionality.
 func generatePlaylist(_ startYear: String, _ endYear: String, _ genres: [String]) -> [[String:String]] {
     var createdPlaylist: [[String:String]] = []
     let songs = loadSongs(from: "Songs")
@@ -14,7 +15,7 @@ func generatePlaylist(_ startYear: String, _ endYear: String, _ genres: [String]
     return createdPlaylist
  }
 
-
+// The full algorithm that would be used if the Spotify API were connected.
 /*
 func algorithm()
 {

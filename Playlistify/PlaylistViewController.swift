@@ -7,17 +7,10 @@ import UIKit
 class PlaylistViewController: UITableViewController {
     // Outlets
     @IBOutlet var playlistTitleLabel: UILabel!
-    //@IBOutlet var playlistGenreLabel: UILabel!
-    //@IBOutlet var playlistTitleLabel: UILabel!
-    //@IBOutlet var playlistYearsLabel: UILabel!
     
     // Data passed from previous view controllers
     var   createdPlaylist: [[String:String]]!
-    var    playlistGenres: [String]!
     var     playlistTitle: String!
-    var playlistStartYear: String!
-    var   playlistEndYear: String!
-    var    selectedGenres: [String]!
     
     // View actions
     override func viewDidLoad() {
@@ -25,8 +18,6 @@ class PlaylistViewController: UITableViewController {
         
         // Labels
         playlistTitleLabel.text = self.playlistTitle
-        //playlistGenreLabel.text = "\(selectedGenres!)"
-        //playlistYearsLabel.text = "\(playlistStartYear!)-\(playlistEndYear!)"
     }
     
     // Segues from the create a playlist playlist page

@@ -33,11 +33,7 @@ class LoadingViewController: UIViewController {
         case "loading-page-to-playlist-page":
             let playlistViewController = segue.destination as! PlaylistViewController
             playlistViewController.createdPlaylist   = createdPlaylist
-            playlistViewController.playlistGenres    = playlistGenres
             playlistViewController.playlistTitle     = playlistTitle
-            playlistViewController.playlistStartYear = playlistStartYear
-            playlistViewController.playlistEndYear   = playlistEndYear
-            playlistViewController.selectedGenres    = selectedGenres
             break
         default:
             preconditionFailure("Unexpected segue identifier")
